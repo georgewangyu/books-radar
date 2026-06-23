@@ -7,7 +7,7 @@ daily and weekly picks from George, a searchable shelf, copyable reading notes,
 and a small request queue. It is intentionally not Goodreads. No ratings, social
 graph, reading challenges, or heavy profile machinery.
 
-Live site: https://george-books-radar.vercel.app
+Live site: https://books-radar.vercel.app
 
 ## What You Get
 
@@ -25,13 +25,13 @@ Pick your agent and run the install command, then ask the agent to set it up.
 ### Codex
 
 ```bash
-mkdir -p ~/.codex/skills && git clone https://github.com/georgewangyu/george-books-radar.git ~/.codex/skills/george-books-radar
+mkdir -p ~/.codex/skills && git clone https://github.com/georgewangyu/books-radar.git ~/.codex/skills/books-radar
 ```
 
 Or use the skill installer:
 
 ```bash
-npx skills add georgewangyu/george-books-radar --skill books-radar -g
+npx skills add georgewangyu/books-radar --skill books-radar -g
 ```
 
 ```text
@@ -41,11 +41,11 @@ set up George's Books Radar
 ### Claude Code / Cursor / Other Agents
 
 ```bash
-git clone https://github.com/georgewangyu/george-books-radar.git ~/skills/george-books-radar
+git clone https://github.com/georgewangyu/books-radar.git ~/skills/books-radar
 ```
 
 ```text
-Use ~/skills/george-books-radar/skills/books-radar/SKILL.md and set up George's Books Radar.
+Use ~/skills/books-radar/skills/books-radar/SKILL.md and set up George's Books Radar.
 ```
 
 The agent walks users through:
@@ -56,8 +56,8 @@ The agent walks users through:
 - tone: concise, operator, or editorial
 - delivery: current chat, Telegram, email, or an OpenClaw channel
 
-Settings are saved locally in `~/.george-books-radar/config.json`. Delivery
-keys, if used, are saved locally in `~/.george-books-radar/.env`.
+Settings are saved locally in `~/.books-radar/config.json`. Delivery
+keys, if used, are saved locally in `~/.books-radar/.env`.
 
 ## Local Development
 
@@ -129,8 +129,8 @@ Server-side GitHub issue creation uses:
 ```env
 GITHUB_TOKEN=
 GITHUB_OWNER=
-GITHUB_REPO=george-books-radar-public
-GITHUB_PRIVATE_REPO=george-books-radar-private-intake
+GITHUB_REPO=books-radar
+GITHUB_PRIVATE_REPO=georgesbooks
 BOOKS_REQUEST_ALLOWED_ORIGIN=
 ```
 

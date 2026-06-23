@@ -75,7 +75,7 @@ test.describe("George's Books Radar catalog", () => {
 
     const clipboard = await page.evaluate(() => navigator.clipboard.readText());
     expect(clipboard).toBe(
-      "npx skills add georgewangyu/george-books-radar --skill books-radar -g",
+      "npx skills add georgewangyu/books-radar --skill books-radar -g",
     );
   });
 

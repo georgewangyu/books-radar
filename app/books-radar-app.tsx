@@ -39,7 +39,7 @@ const issueLabels: Record<string, string> = {
 };
 
 const skillInstallCommand =
-  "npx skills add georgewangyu/george-books-radar --skill books-radar -g";
+  "npx skills add georgewangyu/books-radar --skill books-radar -g";
 
 function statusRank(book: Book) {
   if (book.status === "featured") return 3;

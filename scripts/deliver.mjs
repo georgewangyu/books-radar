@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import { homedir } from "node:os";
 import path from "node:path";
 
-const userDir = path.join(homedir(), ".george-books-radar");
+const userDir = path.join(homedir(), ".books-radar");
 
 function parseEnv(raw) {
   const env = {};
@@ -113,12 +113,12 @@ async function main() {
   }
 
   if (method === "telegram") {
-    if (!env.TELEGRAM_BOT_TOKEN) throw new Error("TELEGRAM_BOT_TOKEN not found in ~/.george-books-radar/.env");
-    if (!config.delivery?.chatId) throw new Error("delivery.chatId not found in ~/.george-books-radar/config.json");
+    if (!env.TELEGRAM_BOT_TOKEN) throw new Error("TELEGRAM_BOT_TOKEN not found in ~/.books-radar/.env");
+    if (!config.delivery?.chatId) throw new Error("delivery.chatId not found in ~/.books-radar/config.json");
     await sendTelegram(text, env.TELEGRAM_BOT_TOKEN, config.delivery.chatId);
   } else if (method === "email") {
-    if (!env.RESEND_API_KEY) throw new Error("RESEND_API_KEY not found in ~/.george-books-radar/.env");
-    if (!config.delivery?.email) throw new Error("delivery.email not found in ~/.george-books-radar/config.json");
+    if (!env.RESEND_API_KEY) throw new Error("RESEND_API_KEY not found in ~/.books-radar/.env");
+    if (!config.delivery?.email) throw new Error("delivery.email not found in ~/.books-radar/config.json");
     await sendEmail(text, env.RESEND_API_KEY, config.delivery.email);
   } else {
     process.stdout.write(text);

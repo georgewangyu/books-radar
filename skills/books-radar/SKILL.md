@@ -23,11 +23,11 @@ Before setup, detect whether OpenClaw is available:
 which openclaw 2>/dev/null && echo "PLATFORM=openclaw" || echo "PLATFORM=other"
 ```
 
-Save the detected platform in `~/.george-books-radar/config.json`.
+Save the detected platform in `~/.books-radar/config.json`.
 
 ## First Run Onboarding
 
-Check whether `~/.george-books-radar/config.json` exists and has
+Check whether `~/.books-radar/config.json` exists and has
 `onboardingComplete: true`. If not, run this onboarding flow.
 
 ### Step 1: Introduction
@@ -90,13 +90,13 @@ Ask:
 Create the user config directory:
 
 ```bash
-mkdir -p ~/.george-books-radar
+mkdir -p ~/.books-radar
 ```
 
 Save config:
 
 ```bash
-cat > ~/.george-books-radar/config.json << 'CFGEOF'
+cat > ~/.books-radar/config.json << 'CFGEOF'
 {
   "platform": "<openclaw or other>",
   "language": "<en, zh, or bilingual>",
@@ -115,10 +115,10 @@ cat > ~/.george-books-radar/config.json << 'CFGEOF'
 CFGEOF
 ```
 
-If using Telegram or email, create `~/.george-books-radar/.env`:
+If using Telegram or email, create `~/.books-radar/.env`:
 
 ```bash
-cat > ~/.george-books-radar/.env << 'ENVEOF'
+cat > ~/.books-radar/.env << 'ENVEOF'
 # Telegram bot token, only if using Telegram delivery
 # TELEGRAM_BOT_TOKEN=paste_your_token_here
 
