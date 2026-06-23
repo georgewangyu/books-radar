@@ -7,6 +7,8 @@ daily and weekly picks from George, a searchable shelf, copyable reading notes,
 and a small request queue. It is intentionally not Goodreads. No ratings, social
 graph, reading challenges, or heavy profile machinery.
 
+Live site: https://george-books-radar.vercel.app
+
 ## What You Get
 
 - Searchable public shelf of books George recommends.
