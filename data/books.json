@@ -1,0 +1,252 @@
+[
+  {
+    "id": "working-in-public",
+    "title": "Working in Public",
+    "author": "Nadia Eghbal",
+    "shelf": "Internet & Open Source",
+    "cadence": "daily",
+    "status": "featured",
+    "year": "2020",
+    "pages": "256",
+    "summary": "A field guide to how modern open-source work actually runs once attention, maintainer labor, and online communities become the real constraints.",
+    "whyRead": "Useful if you are building public catalogs, skills, or open-source proof surfaces and want a clearer mental model for why some projects feel alive while others become unpaid support desks.",
+    "bestFor": [
+      "Understanding maintainers as community operators",
+      "Thinking about contribution funnels",
+      "Designing lighter public project surfaces"
+    ],
+    "notes": [
+      "Read it less as an open-source book and more as a book about attention markets.",
+      "Pairs naturally with any radar project because it explains why curation and contribution rules matter."
+    ],
+    "nextStep": "Read chapter 3, then write one contribution rule your project should enforce.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://press.stripe.com/working-in-public",
+    "markdown": "# Working in Public\n\nAuthor: Nadia Eghbal\nShelf: Internet & Open Source\n\nWhy George recommends it:\nWorking in Public explains the hidden labor behind open-source projects: attention,\ncommunity, maintainership, contribution queues, and the weird economics of public\nsoftware. It is especially useful if you are building public proof systems or\ncatalogs that invite other people in.\n\nBest for:\n- Understanding maintainers as community operators\n- Thinking about contribution funnels\n- Designing lighter public project surfaces\n\nNext step:\nRead chapter 3, then write one contribution rule your project should enforce.\n"
+  },
+  {
+    "id": "the-beginning-of-infinity",
+    "title": "The Beginning of Infinity",
+    "author": "David Deutsch",
+    "shelf": "Models",
+    "cadence": "weekly",
+    "status": "ready",
+    "year": "2011",
+    "pages": "496",
+    "summary": "A big, opinionated argument that progress comes from better explanations and that good explanations unlock more growth than most people expect.",
+    "whyRead": "Good when you want a more ambitious frame for learning, building, and why compounding knowledge matters.",
+    "bestFor": [
+      "Long-range optimism without self-help fluff",
+      "Thinking about explanations as leverage",
+      "Resetting from tactics to worldview"
+    ],
+    "notes": [
+      "This is not a quick productivity book. It is a worldview book.",
+      "The useful move is to ask which of your current beliefs are bad explanations pretending to be constraints."
+    ],
+    "nextStep": "Read one chapter slowly and write the strongest explanation it changes.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://www.penguinrandomhouse.com/books/307918/the-beginning-of-infinity-by-david-deutsch/",
+    "markdown": "# The Beginning of Infinity\n\nAuthor: David Deutsch\nShelf: Models\n\nWhy George recommends it:\nThe book argues that progress is not a finite pile of discoveries. It compounds\nwhen people create better explanations. That makes it a useful read for anyone\ntrying to build systems, taste, or a durable worldview.\n\nBest for:\n- Long-range optimism without self-help fluff\n- Thinking about explanations as leverage\n- Resetting from tactics to worldview\n\nNext step:\nRead one chapter slowly and write the strongest explanation it changes.\n"
+  },
+  {
+    "id": "the-effective-engineer",
+    "title": "The Effective Engineer",
+    "author": "Edmond Lau",
+    "shelf": "Engineering",
+    "cadence": "daily",
+    "status": "ready",
+    "year": "2015",
+    "pages": "260",
+    "summary": "A practical book about leverage, feedback loops, iteration speed, and choosing engineering work that actually matters.",
+    "whyRead": "Useful for builders who are drowning in implementation details and need a sharper lens for picking the next useful action.",
+    "bestFor": [
+      "Prioritizing engineering work",
+      "Building leverage through tooling",
+      "Improving feedback loops"
+    ],
+    "notes": [
+      "The core question is not whether you are busy. It is whether your work changes future work.",
+      "This pairs well with weekly planning or sprint retros."
+    ],
+    "nextStep": "Pick one repeated task this week and automate or delete the worst part.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://www.effectiveengineer.com/",
+    "markdown": "# The Effective Engineer\n\nAuthor: Edmond Lau\nShelf: Engineering\n\nWhy George recommends it:\nThe Effective Engineer is a leverage book disguised as an engineering career\nbook. It is good when your week is full of plausible work and you need to choose\nwhich work compounds.\n\nBest for:\n- Prioritizing engineering work\n- Building leverage through tooling\n- Improving feedback loops\n\nNext step:\nPick one repeated task this week and automate or delete the worst part.\n"
+  },
+  {
+    "id": "a-pattern-language",
+    "title": "A Pattern Language",
+    "author": "Christopher Alexander, Sara Ishikawa, Murray Silverstein",
+    "shelf": "Design",
+    "cadence": "weekly",
+    "status": "ready",
+    "year": "1977",
+    "pages": "1171",
+    "summary": "A catalog of design patterns for towns, buildings, rooms, and daily life, useful far outside architecture.",
+    "whyRead": "A reminder that great design often comes from reusable patterns with human reasons underneath them, not from arbitrary visual taste.",
+    "bestFor": [
+      "Thinking in reusable patterns",
+      "Designing spaces and interfaces around behavior",
+      "Naming recurring design instincts"
+    ],
+    "notes": [
+      "Do not try to read it straight through. Browse it like a catalog.",
+      "The format itself is the lesson: named pattern, context, tradeoff, prescription."
+    ],
+    "nextStep": "Pick three patterns and translate them into software or workspace rules.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://www.patternlanguage.com/",
+    "markdown": "# A Pattern Language\n\nAuthor: Christopher Alexander, Sara Ishikawa, Murray Silverstein\nShelf: Design\n\nWhy George recommends it:\nThis is one of the best examples of a durable catalog format. Each pattern names\na recurring human problem and gives it a reusable shape. That makes it useful\nfor product design, writing, tools, and personal systems.\n\nBest for:\n- Thinking in reusable patterns\n- Designing spaces and interfaces around behavior\n- Naming recurring design instincts\n\nNext step:\nPick three patterns and translate them into software or workspace rules.\n"
+  },
+  {
+    "id": "the-dream-machine",
+    "title": "The Dream Machine",
+    "author": "M. Mitchell Waldrop",
+    "shelf": "Computing History",
+    "cadence": "weekly",
+    "status": "ready",
+    "year": "2001",
+    "pages": "528",
+    "summary": "A history of J.C.R. Licklider and the research culture that led toward personal computing, networks, and interactive machines.",
+    "whyRead": "Good for remembering that software progress is often a taste-and-institution story, not only a technical invention story.",
+    "bestFor": [
+      "Understanding the lineage of interactive computing",
+      "Thinking about research taste",
+      "Getting unstuck from narrow product thinking"
+    ],
+    "notes": [
+      "The lasting lesson is how much computing was shaped by people who could imagine a different relationship with machines.",
+      "Useful context for agent work because it widens the frame beyond today's tooling names."
+    ],
+    "nextStep": "Read the Licklider sections and write what today's agent tooling still lacks.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://mitpress.mit.edu/9780262731647/the-dream-machine/",
+    "markdown": "# The Dream Machine\n\nAuthor: M. Mitchell Waldrop\nShelf: Computing History\n\nWhy George recommends it:\nThe Dream Machine is a history of interactive computing as a worldview. It\nshows how much of modern software came from people who could imagine a better\nrelationship between humans and computers before the hardware was ready.\n\nBest for:\n- Understanding the lineage of interactive computing\n- Thinking about research taste\n- Getting unstuck from narrow product thinking\n\nNext step:\nRead the Licklider sections and write what today's agent tooling still lacks.\n"
+  },
+  {
+    "id": "poor-charlies-almanack",
+    "title": "Poor Charlie's Almanack",
+    "author": "Charlie Munger",
+    "shelf": "Judgment",
+    "cadence": "daily",
+    "status": "ready",
+    "year": "2005",
+    "pages": "548",
+    "summary": "A dense collection of Munger's talks and mental models about incentives, psychology, compounding, and practical judgment.",
+    "whyRead": "Useful when you want to improve decisions without turning everything into a spreadsheet.",
+    "bestFor": [
+      "Mental models",
+      "Decision hygiene",
+      "Spotting incentive problems"
+    ],
+    "notes": [
+      "The best parts are the repeated warnings about incentives and psychological misjudgment.",
+      "Use it as a reference, not a book you need to finish in order."
+    ],
+    "nextStep": "Pick one model and apply it to a current project decision.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://www.stripe.press/poor-charlies-almanack",
+    "markdown": "# Poor Charlie's Almanack\n\nAuthor: Charlie Munger\nShelf: Judgment\n\nWhy George recommends it:\nPoor Charlie's Almanack is a mental-model reference for judgment, incentives,\npsychology, and compounding. It is useful when you need better defaults for\ndecisions rather than more productivity tactics.\n\nBest for:\n- Mental models\n- Decision hygiene\n- Spotting incentive problems\n\nNext step:\nPick one model and apply it to a current project decision.\n"
+  },
+  {
+    "id": "the-art-of-doing-science-and-engineering",
+    "title": "The Art of Doing Science and Engineering",
+    "author": "Richard Hamming",
+    "shelf": "Taste & Work",
+    "cadence": "weekly",
+    "status": "ready",
+    "year": "1997",
+    "pages": "432",
+    "summary": "Hamming's lectures on doing important work, building taste, choosing problems, and developing a long-term technical life.",
+    "whyRead": "A direct antidote to tiny-task drift. It asks whether your effort is pointed at work that could matter.",
+    "bestFor": [
+      "Choosing better problems",
+      "Technical taste",
+      "Long-term career direction"
+    ],
+    "notes": [
+      "The important-work question is uncomfortable because it is supposed to be.",
+      "Best read in small chunks with notes, not consumed as inspiration."
+    ],
+    "nextStep": "Write the three most important problems in your current work area.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://press.stripe.com/the-art-of-doing-science-and-engineering",
+    "markdown": "# The Art of Doing Science and Engineering\n\nAuthor: Richard Hamming\nShelf: Taste & Work\n\nWhy George recommends it:\nHamming is useful because he does not let technical people hide behind busyness.\nThe book keeps returning to taste, problem selection, and whether your work has\na chance of mattering.\n\nBest for:\n- Choosing better problems\n- Technical taste\n- Long-term career direction\n\nNext step:\nWrite the three most important problems in your current work area.\n"
+  },
+  {
+    "id": "designing-data-intensive-applications",
+    "title": "Designing Data-Intensive Applications",
+    "author": "Martin Kleppmann",
+    "shelf": "Engineering",
+    "cadence": "evergreen",
+    "status": "ready",
+    "year": "2017",
+    "pages": "616",
+    "summary": "A clear map of databases, distributed systems, streams, consistency, and the tradeoffs behind modern data infrastructure.",
+    "whyRead": "Worth reading when system complexity stops being theoretical and starts showing up as product behavior.",
+    "bestFor": [
+      "Backend architecture",
+      "Distributed systems tradeoffs",
+      "Understanding reliability language"
+    ],
+    "notes": [
+      "The value is not memorizing terms. It is getting precise about failure modes.",
+      "Keep it nearby when evaluating backend architecture or vendor claims."
+    ],
+    "nextStep": "Read one chapter tied to a real system you maintain or use.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://dataintensive.net/",
+    "markdown": "# Designing Data-Intensive Applications\n\nAuthor: Martin Kleppmann\nShelf: Engineering\n\nWhy George recommends it:\nDDIA gives you language for the invisible tradeoffs behind databases,\ndistributed systems, streams, consistency, and reliability. It is a serious\nengineering reference that pays off when systems get real.\n\nBest for:\n- Backend architecture\n- Distributed systems tradeoffs\n- Understanding reliability language\n\nNext step:\nRead one chapter tied to a real system you maintain or use.\n"
+  },
+  {
+    "id": "the-years-of-lyndon-johnson",
+    "title": "The Years of Lyndon Johnson",
+    "author": "Robert A. Caro",
+    "shelf": "Power",
+    "cadence": "evergreen",
+    "status": "draft",
+    "year": "1982-2012",
+    "pages": "3000+",
+    "summary": "A monumental biography series about ambition, institutions, power, and how politics actually works up close.",
+    "whyRead": "Useful if you want to understand power as a practical operating system rather than a civics-class abstraction.",
+    "bestFor": [
+      "Institutional power",
+      "Biography as systems study",
+      "Longform nonfiction craft"
+    ],
+    "notes": [
+      "This is a project, not a casual recommendation.",
+      "Start with The Path to Power if you want origins, or Master of the Senate if you want legislative machinery."
+    ],
+    "nextStep": "Read one Caro chapter and map the incentives of every major actor.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://www.penguinrandomhouse.com/series/LYJ/the-years-of-lyndon-johnson/",
+    "markdown": "# The Years of Lyndon Johnson\n\nAuthor: Robert A. Caro\nShelf: Power\n\nWhy George recommends it:\nCaro's LBJ books are about ambition, institutions, power, and how systems bend\nunder pressure. They are useful far beyond politics because they show power as\ndaily mechanics.\n\nBest for:\n- Institutional power\n- Biography as systems study\n- Longform nonfiction craft\n\nNext step:\nRead one Caro chapter and map the incentives of every major actor.\n"
+  },
+  {
+    "id": "the-making-of-the-atomic-bomb",
+    "title": "The Making of the Atomic Bomb",
+    "author": "Richard Rhodes",
+    "shelf": "Science History",
+    "cadence": "evergreen",
+    "status": "ready",
+    "year": "1986",
+    "pages": "886",
+    "summary": "A sweeping history of physics, war, institutions, and the people who turned scientific discovery into world-changing technology.",
+    "whyRead": "Good when you want the full stack: discovery, personality, institution, engineering, and consequence.",
+    "bestFor": [
+      "Science history",
+      "Understanding institutions under pressure",
+      "Longform narrative nonfiction"
+    ],
+    "notes": [
+      "The book is long because the context matters.",
+      "It is a reminder that technical breakthroughs are also human and institutional events."
+    ],
+    "nextStep": "Track one discovery from idea to institution to artifact.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://www.simonandschuster.com/books/The-Making-of-the-Atomic-Bomb/Richard-Rhodes/9781451677614",
+    "markdown": "# The Making of the Atomic Bomb\n\nAuthor: Richard Rhodes\nShelf: Science History\n\nWhy George recommends it:\nThis book follows discovery, personality, institution-building, engineering, and\nconsequence in one huge narrative. It is useful when you want to see technology\nas more than invention.\n\nBest for:\n- Science history\n- Understanding institutions under pressure\n- Longform narrative nonfiction\n\nNext step:\nTrack one discovery from idea to institution to artifact.\n"
+  }
+]

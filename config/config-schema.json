@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "George's Books Radar user configuration",
+  "description": "User configuration for George's Books Radar digests. Stored at ~/.george-books-radar/config.json",
+  "type": "object",
+  "properties": {
+    "platform": {
+      "type": "string",
+      "enum": ["openclaw", "other"]
+    },
+    "language": {
+      "type": "string",
+      "enum": ["en", "zh", "bilingual"],
+      "default": "en"
+    },
+    "tone": {
+      "type": "string",
+      "enum": ["concise", "operator", "editorial"],
+      "default": "concise"
+    },
+    "frequency": {
+      "type": "string",
+      "enum": ["daily", "weekly"],
+      "default": "daily"
+    },
+    "timezone": {
+      "type": "string"
+    },
+    "deliveryTime": {
+      "type": "string"
+    },
+    "weeklyDay": {
+      "type": "string"
+    },
+    "delivery": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": ["stdout", "telegram", "email"]
+        },
+        "chatId": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        }
+      }
+    },
+    "onboardingComplete": {
+      "type": "boolean"
+    }
+  },
+  "required": ["platform", "frequency", "timezone", "delivery", "onboardingComplete"]
+}
