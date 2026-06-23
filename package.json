@@ -7,6 +7,7 @@
     "build": "next build",
     "feed:latest": "node scripts/prepare-latest-feed.mjs",
     "feed:weekly": "node scripts/create-weekly-feed.mjs",
+    "import:apple-books": "node scripts/import-apple-books.mjs",
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "test:ui": "playwright test"

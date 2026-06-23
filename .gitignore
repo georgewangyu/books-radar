@@ -8,3 +8,7 @@ output/
 playwright-report
 test-results
 .vercel
+imports/apple-books/drafts/*
+imports/apple-books/raw/*
+!imports/apple-books/drafts/.gitkeep
+!imports/apple-books/raw/.gitkeep
