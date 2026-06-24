@@ -70,7 +70,19 @@ Open `http://localhost:4193`.
 
 ## Shelf Data
 
-The seed shelf lives in:
+Public-ready source notes live in the sibling private source repo:
+
+```text
+../georgesbooks/books/<book-id>.md
+```
+
+Sync them into the public app data with:
+
+```sh
+npm run sync:books
+```
+
+The generated shelf lives in:
 
 ```text
 data/books.json
@@ -85,9 +97,11 @@ Each book has:
 - one next reading action
 - copyable markdown note
 
-Add or edit books there, then run:
+Do not edit generated book content by hand in `data/books.json`. Edit
+`georgesbooks/books/*.md`, then run:
 
 ```sh
+npm run sync:books
 npm run feed:weekly
 npm run --silent feed:latest
 ```

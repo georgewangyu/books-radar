@@ -1,252 +1,252 @@
 [
   {
-    "id": "working-in-public",
-    "title": "Working in Public",
-    "author": "Nadia Eghbal",
-    "shelf": "Internet & Open Source",
+    "id": "guns-germs-and-steel",
+    "title": "Guns, Germs, and Steel",
+    "author": "Jared Diamond",
+    "shelf": "Big History",
     "cadence": "daily",
     "status": "featured",
-    "year": "2020",
-    "pages": "256",
-    "summary": "A field guide to how modern open-source work actually runs once attention, maintainer labor, and online communities become the real constraints.",
-    "whyRead": "Useful if you are building public catalogs, skills, or open-source proof surfaces and want a clearer mental model for why some projects feel alive while others become unpaid support desks.",
+    "year": "1997",
+    "pages": "528",
+    "summary": "A sweeping attempt to explain why power, technology, crops, disease, and institutions developed unevenly across different parts of the world.",
+    "whyRead": "This was the strongest Apple Books engagement signal in the import, with 189 annotations. The public-safe takeaway is the scale of the question: it pushes readers to think in geography, incentives, path dependence, and long historical chains rather than single-cause stories.",
     "bestFor": [
-      "Understanding maintainers as community operators",
-      "Thinking about contribution funnels",
-      "Designing lighter public project surfaces"
+      "Thinking across geography, biology, and institutions",
+      "Asking why societies compound differently",
+      "Practicing large-scale historical explanation without reducing everything to individual genius"
     ],
     "notes": [
-      "Read it less as an open-source book and more as a book about attention markets.",
-      "Pairs naturally with any radar project because it explains why curation and contribution rules matter."
+      "Treat it as a model-building book, not as the last word on world history.",
+      "George's annotation density suggests this was a book for arguing with, mapping, and pressure-testing big explanations."
     ],
-    "nextStep": "Read chapter 3, then write one contribution rule your project should enforce.",
+    "nextStep": "Pick one claimed causal chain in the book and write the strongest counterexample before accepting it.",
     "sourceName": "George shelf",
-    "sourceUrl": "https://press.stripe.com/working-in-public",
-    "markdown": "# Working in Public\n\nAuthor: Nadia Eghbal\nShelf: Internet & Open Source\n\nWhy George recommends it:\nWorking in Public explains the hidden labor behind open-source projects: attention,\ncommunity, maintainership, contribution queues, and the weird economics of public\nsoftware. It is especially useful if you are building public proof systems or\ncatalogs that invite other people in.\n\nBest for:\n- Understanding maintainers as community operators\n- Thinking about contribution funnels\n- Designing lighter public project surfaces\n\nNext step:\nRead chapter 3, then write one contribution rule your project should enforce.\n"
+    "sourceUrl": "https://wwnorton.com/books/Guns-Germs-and-Steel/",
+    "markdown": "# Guns, Germs, and Steel\n\nAuthor: Jared Diamond\nShelf: Big History\n\nWhy George recommends it:\nThis was the strongest Apple Books signal in the import, with 189 annotations.\nThe useful part is the scale of the question: why some societies accumulated\npower, crops, germs, technology, and institutions faster than others.\n\nBest for:\n- Thinking across geography, biology, and institutions\n- Asking why societies compound differently\n- Practicing large-scale historical explanation\n\nGeorge notes:\nRead it as a model to pressure-test, not as a final answer. The value is in\nlearning to reason across long causal chains without falling into one-cause\nhistory.\n\nNext step:\nPick one claimed causal chain and write the strongest counterexample before\naccepting it.\n"
   },
   {
-    "id": "the-beginning-of-infinity",
-    "title": "The Beginning of Infinity",
-    "author": "David Deutsch",
-    "shelf": "Models",
+    "id": "harry-potter-and-the-methods-of-rationality",
+    "title": "Harry Potter and the Methods of Rationality",
+    "author": "Eliezer Yudkowsky",
+    "shelf": "Rationality",
+    "cadence": "daily",
+    "status": "ready",
+    "year": "2010-2015",
+    "pages": "2000+",
+    "summary": "A long rationalist fanfic that turns magic-school fiction into a vehicle for Bayesian reasoning, cognitive bias, decision theory, and agency.",
+    "whyRead": "The Apple Books import shows 133 annotations and 98 highlights, which is a very strong engagement signal. The public-safe note is that George clearly used it less as fandom and more as a playful reasoning gym: how to notice confusion, model incentives, and update under uncertainty.",
+    "bestFor": [
+      "Learning rationalist vocabulary through story",
+      "Practicing curiosity, calibration, and hypothesis testing",
+      "Seeing how cleverness can help and also distort judgment"
+    ],
+    "notes": [
+      "The book is most useful when read as a training ground for noticing thought patterns, not as a personality template.",
+      "The heavy highlighting suggests many small mental-model moments rather than one single takeaway."
+    ],
+    "nextStep": "Read one chapter and write down the moment where a character updates, fails to update, or mistakes cleverness for truth.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://hpmor.com/",
+    "markdown": "# Harry Potter and the Methods of Rationality\n\nAuthor: Eliezer Yudkowsky\nShelf: Rationality\n\nWhy George recommends it:\nThe Apple Books import found 133 annotations and 98 highlights. George seems\nto have used it as a playful reasoning gym: Bayesian updates, cognitive bias,\nincentives, agency, and the ways cleverness can both help and mislead.\n\nBest for:\n- Learning rationalist vocabulary through story\n- Practicing curiosity and calibration\n- Seeing when cleverness stops being wisdom\n\nGeorge notes:\nRead it for the mental moves, not as a personality template. The useful rhythm\nis noticing confusion, making a model, testing it, and updating when reality\npushes back.\n\nNext step:\nRead one chapter and mark where a character updates, fails to update, or\nmistakes cleverness for truth.\n"
+  },
+  {
+    "id": "a-peoples-history-of-the-united-states",
+    "title": "A People's History of the United States",
+    "author": "Howard Zinn",
+    "shelf": "History",
     "cadence": "weekly",
+    "status": "ready",
+    "year": "1980",
+    "pages": "784",
+    "summary": "A political history of the United States told from the perspective of workers, organizers, colonized people, dissenters, and people usually pushed to the edge of official narratives.",
+    "whyRead": "The Apple Books import shows 80 annotations, 51 highlights, and 4 notes. Publicly, that signal says George engaged with it as a counter-narrative engine: a way to ask who benefits from the default story and whose experience gets flattened.",
+    "bestFor": [
+      "Reading history from below rather than from institutions alone",
+      "Stress-testing official narratives",
+      "Understanding protest, labor, empire, and dissent as recurring systems"
+    ],
+    "notes": [
+      "The point is not to swap one totalizing story for another. The point is to notice the missing actors.",
+      "The notes signal suggests George was not just highlighting facts, but actively arguing with the frame."
+    ],
+    "nextStep": "Pick one chapter and write two columns: the official story you learned first, and the actors this version puts back into view.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://www.harpercollins.com/products/a-peoples-history-of-the-united-states-howard-zinn",
+    "markdown": "# A People's History of the United States\n\nAuthor: Howard Zinn\nShelf: History\n\nWhy George recommends it:\nThe import found 80 annotations, 51 highlights, and 4 notes. George seems to\nhave used it as a counter-narrative engine: who benefits from the default\nstory, who gets erased, and what changes when history is read from below.\n\nBest for:\n- Reading history from below\n- Stress-testing official narratives\n- Understanding protest, labor, empire, and dissent\n\nGeorge notes:\nDo not read it as a replacement dogma. Read it as a missing-actors detector.\nThe useful move is to ask what the standard version made hard to see.\n\nNext step:\nPick one chapter and write two columns: the official story you learned first,\nand the actors this version puts back into view.\n"
+  },
+  {
+    "id": "steve-jobs",
+    "title": "Steve Jobs",
+    "author": "Walter Isaacson",
+    "shelf": "Biography",
+    "cadence": "daily",
     "status": "ready",
     "year": "2011",
-    "pages": "496",
-    "summary": "A big, opinionated argument that progress comes from better explanations and that good explanations unlock more growth than most people expect.",
-    "whyRead": "Good when you want a more ambitious frame for learning, building, and why compounding knowledge matters.",
+    "pages": "656",
+    "summary": "A biography of Steve Jobs that follows Apple, Pixar, product taste, intensity, control, charisma, and the personal costs around building iconic technology companies.",
+    "whyRead": "The Apple Books import inferred this title with 65 annotations, a strong signal that George spent time with the product-builder story. The public-safe takeaway is not hero worship. It is the tension between taste, force of will, reality distortion, and the damage that can come with uncompromising standards.",
     "bestFor": [
-      "Long-range optimism without self-help fluff",
-      "Thinking about explanations as leverage",
-      "Resetting from tactics to worldview"
+      "Thinking about product taste and founder intensity",
+      "Separating useful standards from destructive behavior",
+      "Understanding Apple as a design, operations, and narrative machine"
     ],
     "notes": [
-      "This is not a quick productivity book. It is a worldview book.",
-      "The useful move is to ask which of your current beliefs are bad explanations pretending to be constraints."
+      "Read for the operating system behind the products: taste, focus, integration, storytelling, and control.",
+      "The interesting question is where high standards end and unnecessary damage begins."
     ],
-    "nextStep": "Read one chapter slowly and write the strongest explanation it changes.",
+    "nextStep": "After one chapter, write one standard worth copying and one behavior that should not survive translation.",
     "sourceName": "George shelf",
-    "sourceUrl": "https://www.penguinrandomhouse.com/books/307918/the-beginning-of-infinity-by-david-deutsch/",
-    "markdown": "# The Beginning of Infinity\n\nAuthor: David Deutsch\nShelf: Models\n\nWhy George recommends it:\nThe book argues that progress is not a finite pile of discoveries. It compounds\nwhen people create better explanations. That makes it a useful read for anyone\ntrying to build systems, taste, or a durable worldview.\n\nBest for:\n- Long-range optimism without self-help fluff\n- Thinking about explanations as leverage\n- Resetting from tactics to worldview\n\nNext step:\nRead one chapter slowly and write the strongest explanation it changes.\n"
+    "sourceUrl": "https://www.simonandschuster.com/books/Steve-Jobs/Walter-Isaacson/9781451648539",
+    "markdown": "# Steve Jobs\n\nAuthor: Walter Isaacson\nShelf: Biography\n\nWhy George recommends it:\nThe Apple Books import inferred this title with 65 annotations. George's\nengagement signal points to the product-builder story: taste, focus,\nintegration, storytelling, control, and the personal costs of intensity.\n\nBest for:\n- Thinking about product taste and founder intensity\n- Separating useful standards from destructive behavior\n- Understanding Apple as a design and narrative machine\n\nGeorge notes:\nDo not read it as hero worship. The useful tension is where high standards\ncreate great products and where they become needless damage.\n\nNext step:\nWrite one standard worth copying and one behavior that should not survive\ntranslation.\n"
   },
   {
-    "id": "the-effective-engineer",
-    "title": "The Effective Engineer",
-    "author": "Edmond Lau",
-    "shelf": "Engineering",
+    "id": "running-lean",
+    "title": "Running Lean",
+    "author": "Ash Maurya",
+    "shelf": "Startups",
     "cadence": "daily",
     "status": "ready",
-    "year": "2015",
-    "pages": "260",
-    "summary": "A practical book about leverage, feedback loops, iteration speed, and choosing engineering work that actually matters.",
-    "whyRead": "Useful for builders who are drowning in implementation details and need a sharper lens for picking the next useful action.",
+    "year": "2012",
+    "pages": "240",
+    "summary": "A practical startup operating manual for moving from plan A to something that survives customer contact through lean canvases, interviews, experiments, and traction tests.",
+    "whyRead": "The Apple Books import shows 63 annotations and 43 highlights. Publicly, that reads like a hands-on book for turning vague ideas into testable assumptions. The useful part is the discipline: name the riskiest assumption, test it cheaply, and stop confusing planning with proof.",
     "bestFor": [
-      "Prioritizing engineering work",
-      "Building leverage through tooling",
-      "Improving feedback loops"
+      "Early startup idea validation",
+      "Customer interviews and riskiest-assumption testing",
+      "Turning scattered product thoughts into experiments"
     ],
     "notes": [
-      "The core question is not whether you are busy. It is whether your work changes future work.",
-      "This pairs well with weekly planning or sprint retros."
+      "The book pairs well with any moment where the idea feels exciting but the proof is thin.",
+      "George's highlight density suggests practical workflow value, not just conceptual interest."
     ],
-    "nextStep": "Pick one repeated task this week and automate or delete the worst part.",
+    "nextStep": "Write a one-page lean canvas for one idea, then circle the single assumption that could kill it fastest.",
     "sourceName": "George shelf",
-    "sourceUrl": "https://www.effectiveengineer.com/",
-    "markdown": "# The Effective Engineer\n\nAuthor: Edmond Lau\nShelf: Engineering\n\nWhy George recommends it:\nThe Effective Engineer is a leverage book disguised as an engineering career\nbook. It is good when your week is full of plausible work and you need to choose\nwhich work compounds.\n\nBest for:\n- Prioritizing engineering work\n- Building leverage through tooling\n- Improving feedback loops\n\nNext step:\nPick one repeated task this week and automate or delete the worst part.\n"
+    "sourceUrl": "https://leanstack.com/books/running-lean",
+    "markdown": "# Running Lean\n\nAuthor: Ash Maurya\nShelf: Startups\n\nWhy George recommends it:\nThe import found 63 annotations and 43 highlights. George seems to have used\nit as an operating manual for turning vague startup ideas into testable\nassumptions: interviews, lean canvases, experiments, and traction checks.\n\nBest for:\n- Early startup idea validation\n- Customer interviews\n- Riskiest-assumption testing\n\nGeorge notes:\nThis is useful when an idea feels exciting but the proof is thin. The move is\nto stop polishing the plan and test the assumption that can kill it fastest.\n\nNext step:\nWrite a one-page lean canvas, then circle the single assumption that could kill\nthe idea fastest.\n"
   },
   {
-    "id": "a-pattern-language",
-    "title": "A Pattern Language",
-    "author": "Christopher Alexander, Sara Ishikawa, Murray Silverstein",
-    "shelf": "Design",
+    "id": "life-3-0",
+    "title": "Life 3.0",
+    "author": "Max Tegmark",
+    "shelf": "AI & Future",
     "cadence": "weekly",
-    "status": "ready",
-    "year": "1977",
-    "pages": "1171",
-    "summary": "A catalog of design patterns for towns, buildings, rooms, and daily life, useful far outside architecture.",
-    "whyRead": "A reminder that great design often comes from reusable patterns with human reasons underneath them, not from arbitrary visual taste.",
-    "bestFor": [
-      "Thinking in reusable patterns",
-      "Designing spaces and interfaces around behavior",
-      "Naming recurring design instincts"
-    ],
-    "notes": [
-      "Do not try to read it straight through. Browse it like a catalog.",
-      "The format itself is the lesson: named pattern, context, tradeoff, prescription."
-    ],
-    "nextStep": "Pick three patterns and translate them into software or workspace rules.",
-    "sourceName": "George shelf",
-    "sourceUrl": "https://www.patternlanguage.com/",
-    "markdown": "# A Pattern Language\n\nAuthor: Christopher Alexander, Sara Ishikawa, Murray Silverstein\nShelf: Design\n\nWhy George recommends it:\nThis is one of the best examples of a durable catalog format. Each pattern names\na recurring human problem and gives it a reusable shape. That makes it useful\nfor product design, writing, tools, and personal systems.\n\nBest for:\n- Thinking in reusable patterns\n- Designing spaces and interfaces around behavior\n- Naming recurring design instincts\n\nNext step:\nPick three patterns and translate them into software or workspace rules.\n"
-  },
-  {
-    "id": "the-dream-machine",
-    "title": "The Dream Machine",
-    "author": "M. Mitchell Waldrop",
-    "shelf": "Computing History",
-    "cadence": "weekly",
-    "status": "ready",
-    "year": "2001",
-    "pages": "528",
-    "summary": "A history of J.C.R. Licklider and the research culture that led toward personal computing, networks, and interactive machines.",
-    "whyRead": "Good for remembering that software progress is often a taste-and-institution story, not only a technical invention story.",
-    "bestFor": [
-      "Understanding the lineage of interactive computing",
-      "Thinking about research taste",
-      "Getting unstuck from narrow product thinking"
-    ],
-    "notes": [
-      "The lasting lesson is how much computing was shaped by people who could imagine a different relationship with machines.",
-      "Useful context for agent work because it widens the frame beyond today's tooling names."
-    ],
-    "nextStep": "Read the Licklider sections and write what today's agent tooling still lacks.",
-    "sourceName": "George shelf",
-    "sourceUrl": "https://mitpress.mit.edu/9780262731647/the-dream-machine/",
-    "markdown": "# The Dream Machine\n\nAuthor: M. Mitchell Waldrop\nShelf: Computing History\n\nWhy George recommends it:\nThe Dream Machine is a history of interactive computing as a worldview. It\nshows how much of modern software came from people who could imagine a better\nrelationship between humans and computers before the hardware was ready.\n\nBest for:\n- Understanding the lineage of interactive computing\n- Thinking about research taste\n- Getting unstuck from narrow product thinking\n\nNext step:\nRead the Licklider sections and write what today's agent tooling still lacks.\n"
-  },
-  {
-    "id": "poor-charlies-almanack",
-    "title": "Poor Charlie's Almanack",
-    "author": "Charlie Munger",
-    "shelf": "Judgment",
-    "cadence": "daily",
-    "status": "ready",
-    "year": "2005",
-    "pages": "548",
-    "summary": "A dense collection of Munger's talks and mental models about incentives, psychology, compounding, and practical judgment.",
-    "whyRead": "Useful when you want to improve decisions without turning everything into a spreadsheet.",
-    "bestFor": [
-      "Mental models",
-      "Decision hygiene",
-      "Spotting incentive problems"
-    ],
-    "notes": [
-      "The best parts are the repeated warnings about incentives and psychological misjudgment.",
-      "Use it as a reference, not a book you need to finish in order."
-    ],
-    "nextStep": "Pick one model and apply it to a current project decision.",
-    "sourceName": "George shelf",
-    "sourceUrl": "https://www.stripe.press/poor-charlies-almanack",
-    "markdown": "# Poor Charlie's Almanack\n\nAuthor: Charlie Munger\nShelf: Judgment\n\nWhy George recommends it:\nPoor Charlie's Almanack is a mental-model reference for judgment, incentives,\npsychology, and compounding. It is useful when you need better defaults for\ndecisions rather than more productivity tactics.\n\nBest for:\n- Mental models\n- Decision hygiene\n- Spotting incentive problems\n\nNext step:\nPick one model and apply it to a current project decision.\n"
-  },
-  {
-    "id": "the-art-of-doing-science-and-engineering",
-    "title": "The Art of Doing Science and Engineering",
-    "author": "Richard Hamming",
-    "shelf": "Taste & Work",
-    "cadence": "weekly",
-    "status": "ready",
-    "year": "1997",
-    "pages": "432",
-    "summary": "Hamming's lectures on doing important work, building taste, choosing problems, and developing a long-term technical life.",
-    "whyRead": "A direct antidote to tiny-task drift. It asks whether your effort is pointed at work that could matter.",
-    "bestFor": [
-      "Choosing better problems",
-      "Technical taste",
-      "Long-term career direction"
-    ],
-    "notes": [
-      "The important-work question is uncomfortable because it is supposed to be.",
-      "Best read in small chunks with notes, not consumed as inspiration."
-    ],
-    "nextStep": "Write the three most important problems in your current work area.",
-    "sourceName": "George shelf",
-    "sourceUrl": "https://press.stripe.com/the-art-of-doing-science-and-engineering",
-    "markdown": "# The Art of Doing Science and Engineering\n\nAuthor: Richard Hamming\nShelf: Taste & Work\n\nWhy George recommends it:\nHamming is useful because he does not let technical people hide behind busyness.\nThe book keeps returning to taste, problem selection, and whether your work has\na chance of mattering.\n\nBest for:\n- Choosing better problems\n- Technical taste\n- Long-term career direction\n\nNext step:\nWrite the three most important problems in your current work area.\n"
-  },
-  {
-    "id": "designing-data-intensive-applications",
-    "title": "Designing Data-Intensive Applications",
-    "author": "Martin Kleppmann",
-    "shelf": "Engineering",
-    "cadence": "evergreen",
     "status": "ready",
     "year": "2017",
-    "pages": "616",
-    "summary": "A clear map of databases, distributed systems, streams, consistency, and the tradeoffs behind modern data infrastructure.",
-    "whyRead": "Worth reading when system complexity stops being theoretical and starts showing up as product behavior.",
+    "pages": "384",
+    "summary": "A broad look at artificial intelligence, intelligence itself, alignment, society, work, consciousness, and possible long-run futures.",
+    "whyRead": "The Apple Books import shows 60 annotations, 49 highlights, and 2 notes. Publicly, the signal is that George used it to think beyond product demos: what AI changes if intelligence becomes more designable, scalable, and institution-shaping.",
     "bestFor": [
-      "Backend architecture",
-      "Distributed systems tradeoffs",
-      "Understanding reliability language"
+      "Widening the frame from AI tools to AI futures",
+      "Thinking about alignment, governance, and agency",
+      "Asking what changes when intelligence becomes infrastructure"
     ],
     "notes": [
-      "The value is not memorizing terms. It is getting precise about failure modes.",
-      "Keep it nearby when evaluating backend architecture or vendor claims."
+      "The useful read is not prediction bingo. It is forcing clearer categories for AI risk, opportunity, and responsibility.",
+      "The annotation count suggests George was mapping questions, not collecting certainty."
     ],
-    "nextStep": "Read one chapter tied to a real system you maintain or use.",
+    "nextStep": "Pick one future scenario in the book and write what would have to be true for it to happen.",
     "sourceName": "George shelf",
-    "sourceUrl": "https://dataintensive.net/",
-    "markdown": "# Designing Data-Intensive Applications\n\nAuthor: Martin Kleppmann\nShelf: Engineering\n\nWhy George recommends it:\nDDIA gives you language for the invisible tradeoffs behind databases,\ndistributed systems, streams, consistency, and reliability. It is a serious\nengineering reference that pays off when systems get real.\n\nBest for:\n- Backend architecture\n- Distributed systems tradeoffs\n- Understanding reliability language\n\nNext step:\nRead one chapter tied to a real system you maintain or use.\n"
+    "sourceUrl": "https://www.penguinrandomhouse.com/books/552055/life-30-by-max-tegmark/",
+    "markdown": "# Life 3.0\n\nAuthor: Max Tegmark\nShelf: AI & Future\n\nWhy George recommends it:\nThe import found 60 annotations, 49 highlights, and 2 notes. George seems to\nhave used it to widen the frame from AI demos to AI futures: alignment,\ngovernance, agency, and what happens when intelligence becomes infrastructure.\n\nBest for:\n- Widening the frame from AI tools to AI futures\n- Thinking about alignment and governance\n- Asking what changes when intelligence becomes infrastructure\n\nGeorge notes:\nDo not read it as prediction bingo. Read it as a category-forcing book: risk,\nopportunity, responsibility, and the assumptions behind each future.\n\nNext step:\nPick one future scenario and write what would have to be true for it to happen.\n"
   },
   {
-    "id": "the-years-of-lyndon-johnson",
-    "title": "The Years of Lyndon Johnson",
-    "author": "Robert A. Caro",
-    "shelf": "Power",
-    "cadence": "evergreen",
-    "status": "draft",
-    "year": "1982-2012",
-    "pages": "3000+",
-    "summary": "A monumental biography series about ambition, institutions, power, and how politics actually works up close.",
-    "whyRead": "Useful if you want to understand power as a practical operating system rather than a civics-class abstraction.",
+    "id": "tomorrow-and-tomorrow-and-tomorrow",
+    "title": "Tomorrow, and Tomorrow, and Tomorrow",
+    "author": "Gabrielle Zevin",
+    "shelf": "Fiction",
+    "cadence": "weekly",
+    "status": "ready",
+    "year": "2022",
+    "pages": "416",
+    "summary": "A novel about games, friendship, collaboration, ambition, grief, taste, and the strange intimacy of building imaginary worlds with another person.",
+    "whyRead": "The Apple Books import inferred this title with 57 annotations, which is unusually high for a novel in this shelf. The public-safe read is that George likely engaged with it as a book about creative partnership: how people build together, wound each other, need each other, and hide inside shared work.",
     "bestFor": [
-      "Institutional power",
-      "Biography as systems study",
-      "Longform nonfiction craft"
+      "Thinking about creative collaboration",
+      "Reading fiction about games and worldbuilding without treating it as just nostalgia",
+      "Noticing the emotional cost of shared ambition"
     ],
     "notes": [
-      "This is a project, not a casual recommendation.",
-      "Start with The Path to Power if you want origins, or Master of the Senate if you want legislative machinery."
+      "This is a good fiction counterweight to the startup and systems books because it makes collaboration feel human again.",
+      "The annotation signal suggests the relationship dynamics mattered as much as the game-making."
     ],
-    "nextStep": "Read one Caro chapter and map the incentives of every major actor.",
+    "nextStep": "Track one creative partnership in the book and write where the work helps the friendship, and where it becomes a substitute for saying the thing directly.",
     "sourceName": "George shelf",
-    "sourceUrl": "https://www.penguinrandomhouse.com/series/LYJ/the-years-of-lyndon-johnson/",
-    "markdown": "# The Years of Lyndon Johnson\n\nAuthor: Robert A. Caro\nShelf: Power\n\nWhy George recommends it:\nCaro's LBJ books are about ambition, institutions, power, and how systems bend\nunder pressure. They are useful far beyond politics because they show power as\ndaily mechanics.\n\nBest for:\n- Institutional power\n- Biography as systems study\n- Longform nonfiction craft\n\nNext step:\nRead one Caro chapter and map the incentives of every major actor.\n"
+    "sourceUrl": "https://www.penguinrandomhouse.com/books/612090/tomorrow-and-tomorrow-and-tomorrow-by-gabrielle-zevin/",
+    "markdown": "# Tomorrow, and Tomorrow, and Tomorrow\n\nAuthor: Gabrielle Zevin\nShelf: Fiction\n\nWhy George recommends it:\nThe import inferred this title with 57 annotations, unusually high for a novel.\nGeorge seems to have engaged with it as a book about creative partnership:\ngames, friendship, ambition, grief, and hiding inside shared work.\n\nBest for:\n- Thinking about creative collaboration\n- Reading fiction about games and worldbuilding\n- Noticing the emotional cost of shared ambition\n\nGeorge notes:\nThis is a useful counterweight to startup and systems books because it makes\ncollaboration feel human again. The work can bind people together, but it can\nalso become a way not to say the hard thing.\n\nNext step:\nTrack one creative partnership and write where the work helps the friendship,\nand where it becomes a substitute for saying the thing directly.\n"
   },
   {
-    "id": "the-making-of-the-atomic-bomb",
-    "title": "The Making of the Atomic Bomb",
-    "author": "Richard Rhodes",
-    "shelf": "Science History",
+    "id": "the-war-of-the-worlds",
+    "title": "The War of the Worlds",
+    "author": "H. G. Wells",
+    "shelf": "Science Fiction",
     "cadence": "evergreen",
     "status": "ready",
-    "year": "1986",
-    "pages": "886",
-    "summary": "A sweeping history of physics, war, institutions, and the people who turned scientific discovery into world-changing technology.",
-    "whyRead": "Good when you want the full stack: discovery, personality, institution, engineering, and consequence.",
+    "year": "1898",
+    "pages": "192",
+    "summary": "A classic invasion story that turns imperial confidence inside out by imagining humanity as the technologically overmatched species.",
+    "whyRead": "The Apple Books import inferred this title with 33 annotations. Publicly, it works as a compact systems flip: what happens when the observer becomes the observed, the colonizer becomes vulnerable, and human certainty meets a larger technological force.",
     "bestFor": [
-      "Science history",
-      "Understanding institutions under pressure",
-      "Longform narrative nonfiction"
+      "Classic science fiction as perspective inversion",
+      "Thinking about technology shock and civilizational humility",
+      "Reading empire from the other side"
     ],
     "notes": [
-      "The book is long because the context matters.",
-      "It is a reminder that technical breakthroughs are also human and institutional events."
+      "The book is short, but the premise still carries because the power reversal is so clean.",
+      "The annotation signal suggests George found more than just plot: the useful part is the inversion."
     ],
-    "nextStep": "Track one discovery from idea to institution to artifact.",
+    "nextStep": "Read one invasion scene and rewrite it as a systems diagram: assumptions, shock, adaptation, failure.",
     "sourceName": "George shelf",
-    "sourceUrl": "https://www.simonandschuster.com/books/The-Making-of-the-Atomic-Bomb/Richard-Rhodes/9781451677614",
-    "markdown": "# The Making of the Atomic Bomb\n\nAuthor: Richard Rhodes\nShelf: Science History\n\nWhy George recommends it:\nThis book follows discovery, personality, institution-building, engineering, and\nconsequence in one huge narrative. It is useful when you want to see technology\nas more than invention.\n\nBest for:\n- Science history\n- Understanding institutions under pressure\n- Longform narrative nonfiction\n\nNext step:\nTrack one discovery from idea to institution to artifact.\n"
+    "sourceUrl": "https://standardebooks.org/ebooks/h-g-wells/the-war-of-the-worlds",
+    "markdown": "# The War of the Worlds\n\nAuthor: H. G. Wells\nShelf: Science Fiction\n\nWhy George recommends it:\nThe import inferred this title with 33 annotations. The useful public takeaway\nis the power inversion: humanity becomes the technologically overmatched\nspecies, and imperial confidence gets turned inside out.\n\nBest for:\n- Classic science fiction as perspective inversion\n- Thinking about technology shock\n- Reading empire from the other side\n\nGeorge notes:\nThe book is short, but the premise still works because the reversal is clean.\nIt asks what certainty looks like when a larger technological force arrives.\n\nNext step:\nRead one invasion scene and rewrite it as a systems diagram: assumptions,\nshock, adaptation, failure.\n"
+  },
+  {
+    "id": "principles-for-dealing-with-the-changing-world-order",
+    "title": "Principles for Dealing with the Changing World Order",
+    "author": "Ray Dalio",
+    "shelf": "Power & Markets",
+    "cadence": "weekly",
+    "status": "ready",
+    "year": "2021",
+    "pages": "576",
+    "summary": "A macro-history framework for thinking about empires, debt cycles, reserve currencies, internal disorder, external conflict, and shifts in global power.",
+    "whyRead": "The Apple Books import inferred this title with 27 annotations. Publicly, this belongs on Books Radar as a pattern-recognition book: not because every model should be accepted, but because it gives a reusable language for cycles, incentives, and fragility in world systems.",
+    "bestFor": [
+      "Thinking about power transitions and macro cycles",
+      "Asking how debt, currency, and institutions interact",
+      "Turning vague geopolitical anxiety into a model you can challenge"
+    ],
+    "notes": [
+      "Read the framework with skepticism. The value is having a model explicit enough to argue with.",
+      "George's engagement signal points to systems-level curiosity rather than market-timing interest."
+    ],
+    "nextStep": "Choose one country in the book's framework and list the indicators you would actually track yourself.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://www.principles.com/the-changing-world-order/",
+    "markdown": "# Principles for Dealing with the Changing World Order\n\nAuthor: Ray Dalio\nShelf: Power & Markets\n\nWhy George recommends it:\nThe import inferred this title with 27 annotations. George seems to have used\nit as a pattern-recognition book for empires, debt cycles, reserve currencies,\ninternal disorder, external conflict, and shifts in global power.\n\nBest for:\n- Thinking about power transitions and macro cycles\n- Asking how debt, currency, and institutions interact\n- Turning geopolitical anxiety into a model you can challenge\n\nGeorge notes:\nRead the framework skeptically. The point is not to outsource your worldview to\nthe model, but to make the model explicit enough to argue with.\n\nNext step:\nChoose one country in the framework and list the indicators you would actually\ntrack yourself.\n"
+  },
+  {
+    "id": "creativity-inc",
+    "title": "Creativity, Inc.",
+    "author": "Ed Catmull with Amy Wallace",
+    "shelf": "Creative Work",
+    "cadence": "evergreen",
+    "status": "ready",
+    "year": "2014",
+    "pages": "368",
+    "summary": "A Pixar operating manual about building creative organizations, protecting candor, managing fear, and making the conditions for good work repeatable.",
+    "whyRead": "The Apple Books import inferred this title with 19 annotations. Publicly, it is useful as an organizational-design book: how to build a culture where creative quality is not a miracle, feedback has teeth, and people can surface problems early enough to fix them.",
+    "bestFor": [
+      "Creative teams and product teams",
+      "Building feedback systems that do not become theater",
+      "Understanding how process can protect taste instead of killing it"
+    ],
+    "notes": [
+      "This pairs naturally with any project where the work depends on taste, iteration, and honest critique.",
+      "The useful question is how to make candor normal before the stakes get too high."
+    ],
+    "nextStep": "Write one ritual your team or project could use to make bad news visible earlier.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://www.penguinrandomhouse.com/books/214109/creativity-inc-by-ed-catmull-with-amy-wallace/",
+    "markdown": "# Creativity, Inc.\n\nAuthor: Ed Catmull with Amy Wallace\nShelf: Creative Work\n\nWhy George recommends it:\nThe import inferred this title with 19 annotations. George seems to have used\nit as an organizational-design book: how Pixar protected candor, surfaced\nproblems, managed fear, and made creative quality more repeatable.\n\nBest for:\n- Creative teams and product teams\n- Building feedback systems that do not become theater\n- Protecting taste through process\n\nGeorge notes:\nThe point is not Pixar nostalgia. The useful question is how to make candor and\nearly problem-surfacing normal before the stakes get too high.\n\nNext step:\nWrite one ritual your team or project could use to make bad news visible\nearlier.\n"
   }
 ]

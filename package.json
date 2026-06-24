@@ -8,6 +8,8 @@
     "feed:latest": "node scripts/prepare-latest-feed.mjs",
     "feed:weekly": "node scripts/create-weekly-feed.mjs",
     "start": "next start",
+    "sync:books": "node scripts/sync-georgesbooks.mjs",
+    "sync:georgesbooks": "node scripts/sync-georgesbooks.mjs",
     "typecheck": "tsc --noEmit",
     "test:ui": "playwright test"
   },

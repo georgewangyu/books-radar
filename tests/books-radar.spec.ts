@@ -1,7 +1,11 @@
 import { expect, test } from "@playwright/test";
 import { books } from "../lib/books";
 
-const detailPageSample = ["working-in-public", "the-effective-engineer", "a-pattern-language"]
+const detailPageSample = [
+  "guns-germs-and-steel",
+  "harry-potter-and-the-methods-of-rationality",
+  "running-lean",
+]
   .map((id) => books.find((book) => book.id === id))
   .filter((book): book is (typeof books)[number] => Boolean(book));
 
@@ -19,21 +23,23 @@ test.describe("Books Radar catalog", () => {
     await expect(page.getByText(`${books.length} matching books`)).toBeVisible();
     await expect(page.getByLabel("Sort")).toHaveValue("radar");
 
-    await page.getByPlaceholder("Search books, authors, shelves...").fill("open source");
-    await expect(page.getByText("Working in Public").first()).toBeVisible();
-
-    await page.getByRole("button", { name: "Clear filters" }).click();
-    await page.getByRole("button", { name: "Engineering 2" }).click();
-    await expect(page.getByText("The Effective Engineer").first()).toBeVisible();
-    await expect(page.getByText("2 matching books")).toBeVisible();
-
-    await page.getByRole("button", { name: "Clear filters" }).click();
-    await page.getByPlaceholder("Search books, authors, shelves...").fill("Pattern Language");
-    const patternRow = page.locator("article", { hasText: "A Pattern Language" });
-    await patternRow.getByRole("link", { name: /A Pattern Language/ }).click();
-    await expect(page).toHaveURL(/\/books\/a-pattern-language$/);
+    await page.getByPlaceholder("Search books, authors, shelves...").fill("rationality");
     await expect(
-      page.getByRole("heading", { name: "A Pattern Language", level: 1 }),
+      page.getByText("Harry Potter and the Methods of Rationality").first(),
+    ).toBeVisible();
+
+    await page.getByRole("button", { name: "Clear filters" }).click();
+    await page.getByRole("button", { name: "Startups 1" }).click();
+    await expect(page.getByText("Running Lean").first()).toBeVisible();
+    await expect(page.getByText("1 matching books")).toBeVisible();
+
+    await page.getByRole("button", { name: "Clear filters" }).click();
+    await page.getByPlaceholder("Search books, authors, shelves...").fill("Tomorrow");
+    const fictionRow = page.locator("article", { hasText: "Tomorrow, and Tomorrow, and Tomorrow" });
+    await fictionRow.getByRole("link", { name: /Tomorrow, and Tomorrow, and Tomorrow/ }).click();
+    await expect(page).toHaveURL(/\/books\/tomorrow-and-tomorrow-and-tomorrow$/);
+    await expect(
+      page.getByRole("heading", { name: "Tomorrow, and Tomorrow, and Tomorrow", level: 1 }),
     ).toBeVisible();
     await expect(page.getByRole("heading", { name: "Copyable Markdown", level: 2 })).toBeVisible();
     await expect(page.getByRole("button", { name: "Copy note" })).toBeVisible();
@@ -147,7 +153,7 @@ test.describe("Book detail pages", () => {
 
   test("detail page copy button writes the selected note", async ({ page, context }) => {
     await context.grantPermissions(["clipboard-read", "clipboard-write"]);
-    const book = books.find((item) => item.id === "working-in-public") || books[0];
+    const book = books.find((item) => item.id === "guns-germs-and-steel") || books[0];
 
     await page.goto(`/books/${book.id}`);
     await page.getByRole("button", { name: "Copy note" }).click();
