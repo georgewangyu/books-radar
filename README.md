@@ -7,7 +7,7 @@ daily and weekly picks from George, a searchable shelf, copyable reading notes,
 and a small request queue. It is intentionally not Goodreads. No ratings, social
 graph, reading challenges, or heavy profile machinery.
 
-Live site: https://books-radar.vercel.app
+Live site: https://booksradar.snackoverflowgeorge.com
 
 ## What You Get
 

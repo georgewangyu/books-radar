@@ -105,7 +105,7 @@ Updated from the public Books Radar shelf.
 
 ${featured
   .map(
-    (book) => `- [${book.title}](https://books-radar.vercel.app/books/${book.id})
+    (book) => `- [${book.title}](https://booksradar.snackoverflowgeorge.com/books/${book.id})
   - Author: ${book.author}
   - Shelf: ${book.shelf}
   - Cadence: ${book.cadence}
@@ -118,7 +118,7 @@ ${featured
 
 Use these as lightweight daily picks until the next weekly refresh.
 
-${rotation.map((entry) => `- ${entry.day}: [${entry.book.title}](https://books-radar.vercel.app/books/${entry.book.id})`).join("\n")}
+${rotation.map((entry) => `- ${entry.day}: [${entry.book.title}](https://booksradar.snackoverflowgeorge.com/books/${entry.book.id})`).join("\n")}
 
 ## Agent Setup Prompt
 

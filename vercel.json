@@ -1,0 +1,26 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "books-radar.vercel.app"
+        }
+      ],
+      "destination": "https://booksradar.snackoverflowgeorge.com",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "books-radar.vercel.app"
+        }
+      ],
+      "destination": "https://booksradar.snackoverflowgeorge.com/:path*",
+      "permanent": true
+    }
+  ]
+}
