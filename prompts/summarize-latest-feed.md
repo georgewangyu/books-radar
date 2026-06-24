@@ -1,4 +1,4 @@
-Summarize the latest George's Books Radar feed for someone who wants one useful
+Summarize the latest Books Radar feed for someone who wants one useful
 book recommendation, not a giant reading dashboard.
 
 Use the feed as the source of truth. Do not invent books, ratings, rankings, or

@@ -37,7 +37,7 @@ export function issueBody(submission: BookSubmission) {
     submission.visibility === "private" ? "Private review issue" : "Public GitHub issue";
 
   return [
-    "## George's Books Radar submission",
+    "## Books Radar submission",
     "",
     `**Type:** ${typeTitles[submission.submissionType]}`,
     `**Visibility:** ${visibility}`,

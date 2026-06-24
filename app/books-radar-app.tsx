@@ -203,7 +203,7 @@ export function BooksRadarApp({ books }: Props) {
       <header className="topbar">
         <a className="brand" href="#">
           <span className="mark">BR</span>
-          <span>George's Books Radar</span>
+          <span>Books Radar</span>
         </a>
         <nav className="nav-pills" aria-label="Page navigation">
           <a href="#catalog">Catalog</a>
@@ -217,7 +217,7 @@ export function BooksRadarApp({ books }: Props) {
 
       <section className="hero" aria-labelledby="page-title">
         <div className="hero-copy-block">
-          <h1 id="page-title">George's Books Radar</h1>
+          <h1 id="page-title">Books Radar</h1>
           <p className="hero-line">Read what compounds.</p>
           <p className="hero-copy">
             Daily and weekly book recommendations from George, without turning

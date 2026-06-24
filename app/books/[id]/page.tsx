@@ -17,12 +17,12 @@ export async function generateMetadata({ params }: Props) {
 
   if (!book) {
     return {
-      title: "Book not found | George's Books Radar",
+      title: "Book not found | Books Radar",
     };
   }
 
   return {
-    title: `${book.title} | George's Books Radar`,
+    title: `${book.title} | Books Radar`,
     description: book.summary,
   };
 }
@@ -40,7 +40,7 @@ export default async function BookPage({ params }: Props) {
       <header className="topbar">
         <Link className="brand" href="/">
           <span className="mark">BR</span>
-          <span>George's Books Radar</span>
+          <span>Books Radar</span>
         </Link>
         <nav className="nav-pills" aria-label="Book page navigation">
           <Link href="/">Catalog</Link>

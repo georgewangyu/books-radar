@@ -1,4 +1,4 @@
-# George's Books Radar Feeds
+# Books Radar Feeds
 
 Weekly public Books Radar feeds live here:
 

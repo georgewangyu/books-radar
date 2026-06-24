@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "George's Books Radar user configuration",
-  "description": "User configuration for George's Books Radar digests. Stored at ~/.books-radar/config.json",
+  "title": "Books Radar user configuration",
+  "description": "User configuration for Books Radar digests. Stored at ~/.books-radar/config.json",
   "type": "object",
   "properties": {
     "platform": {

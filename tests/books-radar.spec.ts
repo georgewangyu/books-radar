@@ -5,13 +5,13 @@ const detailPageSample = ["working-in-public", "the-effective-engineer", "a-patt
   .map((id) => books.find((book) => book.id === id))
   .filter((book): book is (typeof books)[number] => Boolean(book));
 
-test.describe("George's Books Radar catalog", () => {
+test.describe("Books Radar catalog", () => {
   test("catalog controls, selected detail, and book links work", async ({ page }) => {
     await page.goto("/");
 
-    await expect(page).toHaveTitle("George's Books Radar");
+    await expect(page).toHaveTitle("Books Radar");
     await expect(
-      page.getByRole("heading", { name: "George's Books Radar", level: 1 }),
+      page.getByRole("heading", { name: "Books Radar", level: 1 }),
     ).toBeVisible();
     await expect(page.getByText("Read what compounds.")).toBeVisible();
     await expect(page.getByText("Daily and weekly book recommendations")).toBeVisible();

@@ -87,7 +87,7 @@ function renderFeed({ date, books, featured, hasNewBooks, newBookCount }) {
   const rotation = dailyRotation(featured);
   const bookIds = featured.map((book) => book.id);
 
-  return `# George's Books Radar Weekly Feed - ${date}
+  return `# Books Radar Weekly Feed - ${date}
 
 Updated from the public Books Radar shelf.
 
@@ -125,7 +125,7 @@ ${rotation.map((entry) => `- ${entry.day}: [${entry.book.title}](https://books-r
 Ask your agent:
 
 \`\`\`text
-Use George's Books Radar. Read the latest weekly feed, choose one book for me,
+Use Books Radar. Read the latest weekly feed, choose one book for me,
 summarize why George recommends it, and give me one concrete reading prompt.
 \`\`\`
 
@@ -134,7 +134,7 @@ summarize why George recommends it, and give me one concrete reading prompt.
 For a compact daily recommendation, ask:
 
 \`\`\`text
-Use George's Books Radar and give me today's pick. Keep it compact:
+Use Books Radar and give me today's pick. Keep it compact:
 book, why now, best for, and one next reading action.
 \`\`\`
 

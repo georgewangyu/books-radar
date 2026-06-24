@@ -1,8 +1,8 @@
-# George's Books Radar
+# Books Radar
 
 Read what compounds.
 
-George's Books Radar is a lightweight personal book recommendation catalog:
+Books Radar is a lightweight personal book recommendation catalog:
 daily and weekly picks from George, a searchable shelf, copyable reading notes,
 and a small request queue. It is intentionally not Goodreads. No ratings, social
 graph, reading challenges, or heavy profile machinery.
@@ -35,7 +35,7 @@ npx skills add georgewangyu/books-radar --skill books-radar -g
 ```
 
 ```text
-set up George's Books Radar
+set up Books Radar
 ```
 
 ### Claude Code / Cursor / Other Agents
@@ -45,7 +45,7 @@ git clone https://github.com/georgewangyu/books-radar.git ~/skills/books-radar
 ```
 
 ```text
-Use ~/skills/books-radar/skills/books-radar/SKILL.md and set up George's Books Radar.
+Use ~/skills/books-radar/skills/books-radar/SKILL.md and set up Books Radar.
 ```
 
 The agent walks users through:

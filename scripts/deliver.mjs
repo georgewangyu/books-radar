@@ -79,8 +79,8 @@ async function sendTelegram(text, token, chatId) {
 async function sendEmail(text, apiKey, to) {
   const response = await fetch("https://api.resend.com/emails", {
     body: JSON.stringify({
-      from: "George's Books Radar <digest@resend.dev>",
-      subject: "George's Books Radar digest",
+      from: "Books Radar <digest@resend.dev>",
+      subject: "Books Radar digest",
       text,
       to,
     }),

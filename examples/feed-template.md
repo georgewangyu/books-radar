@@ -1,4 +1,4 @@
-# George's Books Radar Weekly Feed - YYYY-MM-DD
+# Books Radar Weekly Feed - YYYY-MM-DD
 
 Updated from the public Books Radar shelf.
 
