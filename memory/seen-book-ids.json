@@ -1,15 +1,21 @@
 {
-  "updatedAt": "2026-06-24T00:59:01.112Z",
-  "bookCount": 10,
+  "updatedAt": "2026-06-24T01:55:58.344Z",
+  "bookCount": 16,
   "bookIds": [
     "a-peoples-history-of-the-united-states",
+    "blindsight-and-echopraxia",
     "creativity-inc",
+    "educated",
+    "exhalation",
     "guns-germs-and-steel",
     "harry-potter-and-the-methods-of-rationality",
+    "how-to-win-friends-and-influence-people",
     "life-3-0",
+    "principles",
     "principles-for-dealing-with-the-changing-world-order",
     "running-lean",
     "steve-jobs",
+    "the-three-body-problem",
     "the-war-of-the-worlds",
     "tomorrow-and-tomorrow-and-tomorrow"
   ]

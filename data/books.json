@@ -208,21 +208,24 @@
     "status": "ready",
     "year": "2021",
     "pages": "576",
-    "summary": "A macro-history framework for thinking about empires, debt cycles, reserve currencies, internal disorder, external conflict, and shifts in global power.",
-    "whyRead": "The Apple Books import inferred this title with 27 annotations. Publicly, this belongs on Books Radar as a pattern-recognition book: not because every model should be accepted, but because it gives a reusable language for cycles, incentives, and fragility in world systems.",
+    "summary": "Dalio is trying to explain changes in world order by comparing many historical cases of rising and declining powers. The book's core claim is that empires tend to move through recognizable cycles: productive growth, rising education and competitiveness, greater wealth and reserve-currency power, then overextension, internal conflict, debt stress, and external rivalry with rising powers. It spends a lot of time on the relationship between money, credit, real productivity, domestic political disorder, and geopolitical competition, with the US-China relationship as the live case.",
+    "whyRead": "The useful part is not that Dalio's framework should be accepted wholesale. It is that the framework is explicit enough to argue with. George's highlights cluster around research method, archetypes, credit cycles, copying by rising powers, capital controls, China-US competition, and the technology war. That makes this a good book for practicing macro pattern recognition while keeping your skepticism turned on.",
     "bestFor": [
       "Thinking about power transitions and macro cycles",
       "Asking how debt, currency, and institutions interact",
-      "Turning vague geopolitical anxiety into a model you can challenge"
+      "Turning vague geopolitical anxiety into a concrete model you can challenge"
     ],
     "notes": [
-      "Read the framework with skepticism. The value is having a model explicit enough to argue with.",
-      "George's engagement signal points to systems-level curiosity rather than market-timing interest."
+      "George's direct Apple Books note was on research method: how to conduct better research. The important move is Dalio's case-study approach: collect many historical examples, look for repeated patterns, form an archetype, then stress-test it against scholars, practitioners, and counterexamples.",
+      "The \"big cycle\" frame is useful because it zooms out from daily news. The highlighted pattern is that dominant powers can look strongest near the point where debt, entitlement, comfort, and political conflict make them more fragile.",
+      "The money and credit sections matter because they separate financial claims from real productivity. A country can create more money and credit, but that is not the same as creating more real wealth, goods, services, or capability.",
+      "The copying point is important for understanding rising powers. Mature powers spend more to invent and maintain, while rising powers can often copy working models faster and cheaper, then compete from a lower-cost base.",
+      "The China-US sections are useful less as prediction and more as a map of rivalry: technology dependencies, semiconductors, capital flows, nationalism, internal disorder, and disputes that eventually become tests of power when there is no trusted adjudicator."
     ],
-    "nextStep": "Choose one country in the book's framework and list the indicators you would actually track yourself.",
+    "nextStep": "Choose one country in the framework and build your own indicator list: productivity, debt, reserve-currency trust, internal conflict, education, technology dependency, capital controls, and external military/economic pressure.",
     "sourceName": "George shelf",
     "sourceUrl": "https://www.principles.com/the-changing-world-order/",
-    "markdown": "# Principles for Dealing with the Changing World Order\n\nAuthor: Ray Dalio\nShelf: Power & Markets\n\nWhy George recommends it:\nThe import inferred this title with 27 annotations. George seems to have used\nit as a pattern-recognition book for empires, debt cycles, reserve currencies,\ninternal disorder, external conflict, and shifts in global power.\n\nBest for:\n- Thinking about power transitions and macro cycles\n- Asking how debt, currency, and institutions interact\n- Turning geopolitical anxiety into a model you can challenge\n\nGeorge notes:\nRead the framework skeptically. The point is not to outsource your worldview to\nthe model, but to make the model explicit enough to argue with.\n\nNext step:\nChoose one country in the framework and list the indicators you would actually\ntrack yourself.\n"
+    "markdown": "# Principles for Dealing with the Changing World Order\n\nAuthor: Ray Dalio\nShelf: Power & Markets\n\nWhy George recommends it:\nDalio is trying to explain changes in world order by comparing historical cases\nof rising and declining powers. George's highlights cluster around research\nmethod, archetypes, credit cycles, copying by rising powers, capital controls,\nChina-US competition, and the technology war. The value is not accepting the\nmodel wholesale. The value is getting a model explicit enough to argue with.\n\nBest for:\n- Thinking about power transitions and macro cycles\n- Asking how debt, currency, and institutions interact\n- Turning vague geopolitical anxiety into a concrete model you can challenge\n\nGeorge notes:\n- Research method: collect many historical examples, look for repeated\n  patterns, form an archetype, then stress-test it.\n- Money and credit are not the same as real wealth. More claims on wealth do\n  not automatically mean more goods, services, productivity, or capability.\n- Rising powers can copy what mature powers spent years inventing, then compete\n  from a lower-cost base.\n- The China-US technology sections are useful as a rivalry map: semiconductors,\n  dependency, capital flows, nationalism, and tests of power.\n\nNext step:\nChoose one country and build your own indicator list: productivity, debt,\nreserve-currency trust, internal conflict, education, technology dependency,\ncapital controls, and external pressure.\n"
   },
   {
     "id": "creativity-inc",
@@ -248,5 +251,161 @@
     "sourceName": "George shelf",
     "sourceUrl": "https://www.penguinrandomhouse.com/books/214109/creativity-inc-by-ed-catmull-with-amy-wallace/",
     "markdown": "# Creativity, Inc.\n\nAuthor: Ed Catmull with Amy Wallace\nShelf: Creative Work\n\nWhy George recommends it:\nThe import inferred this title with 19 annotations. George seems to have used\nit as an organizational-design book: how Pixar protected candor, surfaced\nproblems, managed fear, and made creative quality more repeatable.\n\nBest for:\n- Creative teams and product teams\n- Building feedback systems that do not become theater\n- Protecting taste through process\n\nGeorge notes:\nThe point is not Pixar nostalgia. The useful question is how to make candor and\nearly problem-surfacing normal before the stakes get too high.\n\nNext step:\nWrite one ritual your team or project could use to make bad news visible\nearlier.\n"
+  },
+  {
+    "id": "how-to-win-friends-and-influence-people",
+    "title": "How to Win Friends and Influence People",
+    "author": "Dale Carnegie",
+    "shelf": "Communication",
+    "cadence": "daily",
+    "status": "ready",
+    "year": "1936",
+    "pages": "288",
+    "summary": "Carnegie's book is a plainspoken manual for dealing with people by starting from their incentives, pride, fears, interests, and need to feel important. It argues that persuasion rarely begins with being right. It begins with lowering defensiveness, showing real interest, understanding the other person's point of view, giving sincere appreciation, and letting people keep dignity while changing their mind.",
+    "whyRead": "The Apple Books import inferred this title with 19 annotations. The highlights cluster around emotional rather than purely logical persuasion: do not begin with criticism, understand the other person's angle, remember that people care most about their own problems, and prepare for conversations by learning what the other person genuinely cares about. This is broadly useful because almost every ambitious project eventually becomes a people problem.",
+    "bestFor": [
+      "Communicating without triggering needless defensiveness",
+      "Sales, hiring, interviews, partnerships, and conflict repair",
+      "Remembering that attention and status matter in everyday work"
+    ],
+    "notes": [
+      "The highlighted through-line is that people are not abstract logic machines. They are emotional, proud, status-sensitive, and often more persuaded by being understood than by being corrected.",
+      "George's highlights point to a practical communication habit: before asking for something, learn what the other person already values.",
+      "The book can sound manipulative if read badly. The better read is: be genuinely interested, give people dignity, and make the useful path feel like their path too."
+    ],
+    "nextStep": "Before one important conversation this week, write the other person's likely fear, pride point, and desired win.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://www.simonandschuster.com/books/How-to-Win-Friends-and-Influence-People/Dale-Carnegie/9780671027032",
+    "markdown": "# How to Win Friends and Influence People\n\nAuthor: Dale Carnegie\nShelf: Communication\n\nWhy George recommends it:\nThe import inferred this title with 19 annotations. The useful pattern in\nGeorge's highlights is that persuasion rarely begins with being right. It\nbegins with understanding pride, fear, interest, and the other person's point\nof view.\n\nBest for:\n- Communicating without needless defensiveness\n- Sales, hiring, interviews, partnerships, and conflict repair\n- Remembering that attention and status matter in everyday work\n\nGeorge notes:\nRead it as a dignity book, not as a manipulation book. People are more willing\nto move when they feel seen, respected, and not cornered.\n\nNext step:\nBefore one important conversation, write the other person's likely fear, pride\npoint, and desired win.\n"
+  },
+  {
+    "id": "the-three-body-problem",
+    "title": "The Three-Body Problem",
+    "author": "Cixin Liu",
+    "shelf": "Science Fiction",
+    "cadence": "weekly",
+    "status": "ready",
+    "year": "2008",
+    "pages": "400",
+    "summary": "The Three-Body Problem starts in the trauma of the Cultural Revolution and expands into first contact, scientific disillusionment, planetary instability, game-like simulation, and civilizational strategy. The novel is less about aliens as monsters and more about what happens when people lose faith in humanity, discover a larger cosmic game, and make choices under extreme uncertainty.",
+    "whyRead": "The Apple Books import inferred this title with 18 annotations. The highlighted sections cluster around ideology, scientific authority under political violence, environmental disillusionment, Ye Wenjie's choices, and the Three Body simulation as a way to reason about unstable worlds. This belongs on Books Radar because it is both science fiction and systems fiction: individual trauma, civilization-level incentives, and cosmic constraints all interact.",
+    "bestFor": [
+      "Science fiction with civilizational scale",
+      "Thinking about ideology, scientific trust, and disillusionment",
+      "Seeing first contact as a systems problem rather than a spectacle"
+    ],
+    "notes": [
+      "The strongest highlighted thread is not just \"aliens arrive.\" It is how political trauma and disappointment with humanity can make an outside force feel like judgment, rescue, or escape.",
+      "The Three Body game sections are useful because they make instability tangible. A chaotic system becomes something characters have to inhabit, not just describe.",
+      "Read it for the bridge between personal history and cosmic stakes."
+    ],
+    "nextStep": "Track Ye Wenjie's decision path: what experiences make her receptive to a civilization-level answer?",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://us.macmillan.com/books/9780765382030/thethreebodyproblem/",
+    "markdown": "# The Three-Body Problem\n\nAuthor: Cixin Liu\nShelf: Science Fiction\n\nWhy George recommends it:\nThe import inferred this title with 18 annotations. George's highlights cluster\naround ideology, scientific authority under political violence, environmental\ndisillusionment, Ye Wenjie's choices, and the Three Body simulation as a way to\nreason about unstable worlds.\n\nBest for:\n- Science fiction with civilizational scale\n- Thinking about ideology, science, and disillusionment\n- Seeing first contact as a systems problem\n\nGeorge notes:\nThe book is strongest when personal trauma and cosmic stakes touch. First\ncontact is not just spectacle here. It is a test of what people believe\nhumanity deserves.\n\nNext step:\nTrack Ye Wenjie's decision path: what experiences make her receptive to a\ncivilization-level answer?\n"
+  },
+  {
+    "id": "educated",
+    "title": "Educated",
+    "author": "Tara Westover",
+    "shelf": "Memoir",
+    "cadence": "weekly",
+    "status": "ready",
+    "year": "2018",
+    "pages": "352",
+    "summary": "Educated is a memoir about growing up in an isolated survivalist family in Idaho, then slowly building a self through education, distance, memory, and the painful act of naming what happened. The book is not only about school. It is about how reality gets controlled inside families, how loyalty can fight perception, and how learning can create a self that the old world no longer recognizes.",
+    "whyRead": "The Apple Books import inferred this title with 16 annotations and 1 note. The actual George note says one passage felt like a gut punch. Publicly, that reads as a strong emotional signal: this is a book about the delayed force of memory, the cost of leaving a closed system, and the moment when language finally catches up to experience.",
+    "bestFor": [
+      "Memoir about education, family, and self-invention",
+      "Thinking about memory, loyalty, and reality control",
+      "Understanding why leaving a world can be both liberation and grief"
+    ],
+    "notes": [
+      "George's note is emotional rather than tactical: the book hit hard. Keep that texture in the recommendation rather than turning it into a generic \"resilience\" book.",
+      "The highlighted sections point to memory, danger, family belief systems, and the slow process of becoming able to describe your own life accurately.",
+      "The public-safe takeaway is that education is not just credentialing. It can be the language that lets someone stop outsourcing reality."
+    ],
+    "nextStep": "Read one chapter and write the difference between what Tara is told is true and what her body or memory seems to know is true.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://www.penguinrandomhouse.com/books/550168/educated-by-tara-westover/",
+    "markdown": "# Educated\n\nAuthor: Tara Westover\nShelf: Memoir\n\nWhy George recommends it:\nThe import inferred this title with 16 annotations and 1 note. George's note\nwas emotional: one passage felt like a gut punch. Publicly, this belongs here\nas a memoir about memory, loyalty, reality control, and education as the\nlanguage for building a self.\n\nBest for:\n- Memoir about education, family, and self-invention\n- Thinking about memory, loyalty, and reality control\n- Understanding why leaving a world can be both liberation and grief\n\nGeorge notes:\nDo not flatten this into a generic resilience book. The useful force is the\nslow, painful process of being able to describe your own life accurately.\n\nNext step:\nRead one chapter and write the difference between what Tara is told is true and\nwhat her body or memory seems to know is true.\n"
+  },
+  {
+    "id": "exhalation",
+    "title": "Exhalation",
+    "author": "Ted Chiang",
+    "shelf": "Speculative Fiction",
+    "cadence": "weekly",
+    "status": "ready",
+    "year": "2019",
+    "pages": "352",
+    "summary": "Exhalation is a collection of speculative stories about time, choice, entropy, memory, artificial life, language, grief, and responsibility. Chiang's stories usually begin with a clean premise, then patiently follow its philosophical and emotional consequences. The result is fiction that feels like a thought experiment with a human cost.",
+    "whyRead": "The Apple Books import inferred this title with 15 annotations. The sections highlighted include \"The Merchant and the Alchemist's Gate,\" \"Exhalation,\" and \"The Lifecycle of Software Objects,\" which are exactly the stories that turn abstract ideas into lived consequences: regret and time, entropy and self-knowledge, care and artificial life.",
+    "bestFor": [
+      "Short speculative fiction with philosophical precision",
+      "Thinking about AI, agency, memory, and responsibility through story",
+      "Readers who want ideas without losing the human stakes"
+    ],
+    "notes": [
+      "The highlights look more like vocabulary and concept-marking than personal notes, so the public note should stay high-level.",
+      "The best Chiang move is that the premise never stays abstract. Someone has to live with it.",
+      "This is a better modern ideas-fiction slot if the shelf wants something more contemporary than classic invasion sci-fi."
+    ],
+    "nextStep": "Read \"The Lifecycle of Software Objects\" and write what kind of responsibility a creator has when a system becomes dependent on them.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://www.penguinrandomhouse.com/books/562270/exhalation-by-ted-chiang/",
+    "markdown": "# Exhalation\n\nAuthor: Ted Chiang\nShelf: Speculative Fiction\n\nWhy George recommends it:\nThe import inferred this title with 15 annotations. George's highlighted\nsections point to Chiang's strongest move: clean speculative premises that\nbecome emotional and philosophical consequences someone has to live with.\n\nBest for:\n- Short speculative fiction with philosophical precision\n- Thinking about AI, agency, memory, and responsibility through story\n- Readers who want ideas without losing human stakes\n\nGeorge notes:\nRead it as thought experiments with costs. The premise is never just a clever\nidea. It changes what a person owes, regrets, remembers, or chooses.\n\nNext step:\nRead \"The Lifecycle of Software Objects\" and write what responsibility a\ncreator has when a system becomes dependent on them.\n"
+  },
+  {
+    "id": "principles",
+    "title": "Principles",
+    "author": "Ray Dalio",
+    "shelf": "Personal Ops",
+    "cadence": "evergreen",
+    "status": "ready",
+    "year": "2017",
+    "pages": "592",
+    "summary": "Principles is Dalio's attempt to turn his life, investing, management, mistakes, and decision rules into an explicit operating system. The first half is autobiographical: curiosity, independence, painful mistakes, meditation, markets, and the habit of studying consequences. The second half turns into a rulebook for reality-facing, goal-setting, diagnosis, disagreement, and organizational decision-making.",
+    "whyRead": "The Apple Books import inferred this title with 15 annotations. The highlighted sections lean toward Dalio's personal operating system rather than macro history: hearing a different drummer, meditation, consequences of easy money, balancing opposing risks, crossing the jungle for a better life, and going slowly when two necessary things seem in tension.",
+    "bestFor": [
+      "Personal operating principles and decision hygiene",
+      "Thinking through goals, tradeoffs, and painful feedback",
+      "Turning implicit rules into explicit ones you can revise"
+    ],
+    "notes": [
+      "This is more personal-ops focused than Changing World Order. It is about how to decide and operate, not how empires cycle.",
+      "The highlighted material points to a useful theme: independence is not just contrarianism. It requires reality contact, consequences, and a system for learning from being wrong.",
+      "The \"go slowly when two needed things are at odds\" idea is a good George-style planning note: tension is a signal to reason more carefully, not a command to pick impulsively."
+    ],
+    "nextStep": "Write three principles you actually use, then add one example where each principle would have changed a recent decision.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://www.principles.com/principles/",
+    "markdown": "# Principles\n\nAuthor: Ray Dalio\nShelf: Personal Ops\n\nWhy George recommends it:\nThe import inferred this title with 15 annotations. Unlike Changing World\nOrder, this is the personal-ops Dalio book: goals, reality contact, mistakes,\ntradeoffs, meditation, feedback, and making implicit decision rules explicit.\n\nBest for:\n- Personal operating principles and decision hygiene\n- Thinking through goals, tradeoffs, and painful feedback\n- Turning implicit rules into explicit ones you can revise\n\nGeorge notes:\nThe useful thread is independence with consequences. Hearing a different\ndrummer is not enough. You need reality contact, a feedback loop, and a way to\nrevise your own rules.\n\nNext step:\nWrite three principles you actually use, then add one example where each would\nhave changed a recent decision.\n"
+  },
+  {
+    "id": "blindsight-and-echopraxia",
+    "title": "Blindsight + Echopraxia",
+    "author": "Peter Watts",
+    "shelf": "Science Fiction",
+    "cadence": "evergreen",
+    "status": "ready",
+    "year": "2006-2014",
+    "pages": "720",
+    "summary": "Peter Watts's Firefall books are hard science fiction about alien contact, consciousness, intelligence, biology, and the uncomfortable possibility that awareness is not the same thing as usefulness. Blindsight in particular asks whether a mind can be intelligent without being conscious, and whether humans might be worse at understanding reality because we narrate ourselves too much.",
+    "whyRead": "This is a weaker count than the top shelf, but it has exact Apple Books metadata: 11 annotations, 10 highlights, and 1 note. The actual George note asks whether humans are the machines collecting data for AI. That is a strong Books Radar fit because it connects alien intelligence, machine intelligence, human redundancy, and the possibility that consciousness is not the center of the story.",
+    "bestFor": [
+      "Hard science fiction about intelligence and consciousness",
+      "Thinking about AI, alien cognition, and human redundancy",
+      "Readers who like dense, unsettling idea fiction"
+    ],
+    "notes": [
+      "George's public-safe note is the key: what if humans are data-collection machinery for AI? That question makes the book feel newly relevant in an agent/AI world.",
+      "The highlights point toward alienation, ship AI, human professional redundancy, engineered bodies, and the gap between being conscious and being effective.",
+      "Read this as a discomfort book. Its job is to make human-centered assumptions feel less automatic."
+    ],
+    "nextStep": "After one chapter, write the difference between intelligence, consciousness, usefulness, and agency.",
+    "sourceName": "George shelf",
+    "sourceUrl": "https://us.macmillan.com/books/9781250237480/firefall/",
+    "markdown": "# Blindsight + Echopraxia\n\nAuthor: Peter Watts\nShelf: Science Fiction\n\nWhy George recommends it:\nThis has exact Apple Books metadata: 11 annotations, 10 highlights, and 1 note.\nGeorge's note asks whether humans are the machines collecting data for AI. That\nmakes the book feel newly relevant: alien intelligence, machine intelligence,\nhuman redundancy, and the possibility that consciousness is not the center of\nthe story.\n\nBest for:\n- Hard science fiction about intelligence and consciousness\n- Thinking about AI, alien cognition, and human redundancy\n- Dense, unsettling idea fiction\n\nGeorge notes:\nRead it as a discomfort book. It asks whether awareness is the same as\nusefulness, and whether humans narrate themselves into a false sense of\ncentrality.\n\nNext step:\nAfter one chapter, write the difference between intelligence, consciousness,\nusefulness, and agency.\n"
   }
 ]
