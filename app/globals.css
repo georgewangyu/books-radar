@@ -189,6 +189,14 @@ h2 {
   line-height: 1.55;
 }
 
+.hero-copy p {
+  margin-bottom: 14px;
+}
+
+.hero-copy p:last-child {
+  margin-bottom: 0;
+}
+
 .hero-note {
   align-self: end;
   border-left: 2px solid var(--ink);

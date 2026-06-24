@@ -10,6 +10,7 @@
     "start": "next start",
     "sync:books": "node scripts/sync-georgesbooks.mjs",
     "sync:georgesbooks": "node scripts/sync-georgesbooks.mjs",
+    "validate:books": "node scripts/sync-georgesbooks.mjs --check",
     "typecheck": "tsc --noEmit",
     "test:ui": "playwright test"
   },

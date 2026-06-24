@@ -1,0 +1,62 @@
+name: Sync Book Sources
+
+on:
+  schedule:
+    - cron: "0 15 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Books Radar
+        uses: actions/checkout@v4
+        with:
+          path: books-radar
+
+      - name: Check out GeorgesBooks
+        uses: actions/checkout@v4
+        with:
+          repository: georgewangyu/georgesbooks
+          path: georgesbooks
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: books-radar/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: books-radar
+
+      - name: Sync reviewed book notes
+        run: npm run sync:books
+        working-directory: books-radar
+        env:
+          GEORGESBOOKS_DIR: ${{ github.workspace }}/georgesbooks/books
+
+      - name: Verify app
+        run: |
+          npm run typecheck
+          npm run build
+        working-directory: books-radar
+
+      - name: Open sync pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          path: books-radar
+          branch: automation/sync-book-sources
+          commit-message: Sync book source markdown
+          title: Sync book source markdown
+          body: |
+            Weekly sync from `georgewangyu/georgesbooks`.
+
+            This imports reviewed public-ready book markdown into Books Radar,
+            then runs the source quality gate, typecheck, and production build.

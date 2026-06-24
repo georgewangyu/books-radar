@@ -12,6 +12,7 @@ export type Book = {
   year: string;
   pages: string;
   summary: string;
+  fullSummary: string;
   whyRead: string;
   bestFor: string[];
   notes: string[];

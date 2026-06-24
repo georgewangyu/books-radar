@@ -82,6 +82,17 @@ Sync them into the public app data with:
 npm run sync:books
 ```
 
+Check source quality without rewriting generated data:
+
+```sh
+npm run validate:books
+```
+
+The sync intentionally fails if a source note looks like scaffold text, raw
+Apple Books export material, private local data, or a thin recommendation. Each
+public source needs a real summary, a George-style recommendation, best-for
+items, notes, a next reading action, and a fenced `Books Radar Markdown` block.
+
 The generated shelf lives in:
 
 ```text
@@ -101,6 +112,7 @@ Do not edit generated book content by hand in `data/books.json`. Edit
 `georgesbooks/books/*.md`, then run:
 
 ```sh
+npm run validate:books
 npm run sync:books
 npm run feed:weekly
 npm run --silent feed:latest

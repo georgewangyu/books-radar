@@ -116,6 +116,7 @@ export function BooksRadarApp({ books }: Props) {
         book.cadence,
         book.status,
         book.summary,
+        book.fullSummary,
         book.whyRead,
         book.bestFor.join(" "),
         book.notes.join(" "),

@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props) {
 
   return {
     title: `${book.title} | Books Radar`,
-    description: book.summary,
+    description: book.fullSummary || book.summary,
   };
 }
 
@@ -60,7 +60,11 @@ export default async function BookPage({ params }: Props) {
             </p>
             <h1>{book.title}</h1>
             <p className="detail-author">by {book.author}</p>
-            <p className="hero-copy">{book.summary}</p>
+            <div className="hero-copy">
+              {(book.fullSummary || book.summary).split(/\n\n+/).map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
           </div>
           <aside className="book-page-meta">
             <span className={`status status-${book.status}`}>{book.status}</span>
