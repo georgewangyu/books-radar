@@ -11,6 +11,10 @@ const unsafePublicPatterns = [
   { label: "TODO marker", pattern: /\bTODO\b/i },
   { label: "placeholder text", pattern: /\bplaceholder\b/i },
   { label: "scaffold text", pattern: /\bscaffold(?:ed|ing)?\b/i },
+  { label: "Apple Books reference", pattern: /\bApple Books\b/i },
+  { label: "annotation count language", pattern: /\bannotations?\b/i },
+  { label: "highlight count language", pattern: /\bhighlights?\b/i },
+  { label: "import log language", pattern: /\bimport(?:ed|er|ing|s)?\b/i },
   { label: "raw Apple Books export heading", pattern: /## Highlights, Notes, And Bookmarks/i },
   { label: "private Apple Books draft marker", pattern: /Private Apple Books/i },
   { label: "Apple Books asset id", pattern: /apple_books_asset_id/i },
@@ -75,6 +79,33 @@ function fencedMarkdown(markdown) {
   return match?.[1]?.trimEnd() || "";
 }
 
+function wrapMarkdownText(text, width = 88) {
+  return paragraphs(text)
+    .map((paragraph) => {
+      const lines = [];
+      const words = paragraph.split(/\s+/);
+      let line = "";
+
+      for (const word of words) {
+        if (!line) {
+          line = word;
+        } else if (`${line} ${word}`.length <= width) {
+          line = `${line} ${word}`;
+        } else {
+          lines.push(line);
+          line = word;
+        }
+      }
+
+      if (line) {
+        lines.push(line);
+      }
+
+      return lines.join("\n");
+    })
+    .join("\n\n");
+}
+
 function wordCount(text) {
   return String(text || "")
     .replace(/```[\s\S]*?```/g, " ")
@@ -116,6 +147,29 @@ ${nextStep}
 `;
 }
 
+function buildPublicMarkdown(book) {
+  return `# ${book.title}
+
+Author: ${book.author}
+Shelf: ${book.shelf}
+
+Summary:
+${wrapMarkdownText(book.fullSummary)}
+
+Why George recommends it:
+${wrapMarkdownText(book.whyRead)}
+
+Best for:
+${book.bestFor.map((item) => `- ${item}`).join("\n")}
+
+George notes:
+${book.notes.map((item) => `- ${item}`).join("\n")}
+
+Next step:
+${wrapMarkdownText(book.nextStep)}
+`;
+}
+
 function toBook(markdown, sourcePath) {
   const fields = parseFrontmatter(markdown);
   const required = ["id", "title", "author", "shelf", "cadence", "status"];
@@ -130,9 +184,8 @@ function toBook(markdown, sourcePath) {
   const bestFor = listItems(section(markdown, "Best For"));
   const notes = listItems(section(markdown, "Notes"));
   const nextStep = firstParagraph(markdown, "Next Reading Action");
-  const publicMarkdown = fencedMarkdown(markdown) || buildFallbackMarkdown(fields, bestFor, nextStep);
 
-  return {
+  const book = {
     id: fields.id,
     title: fields.title,
     author: fields.author,
@@ -149,15 +202,16 @@ function toBook(markdown, sourcePath) {
     nextStep,
     sourceName: fields.source_name || "George shelf",
     sourceUrl: fields.source_url || "",
-    markdown: `${publicMarkdown}\n`,
+    markdown: "",
     radarOrder: Number.parseInt(fields.radar_order || "9999", 10),
   };
+
+  book.markdown = `${buildPublicMarkdown(book)}\n`;
+  return book;
 }
 
 function validateBookSource(book, markdown, sourcePath) {
   const errors = [];
-  const customMarkdown = fencedMarkdown(markdown);
-
   assertMinimumWords(errors, "Summary", book.fullSummary, 90);
   assertMinimumWords(errors, "Why George Recommends It", book.whyRead, 45);
   assertMinimumWords(errors, "Next Reading Action", book.nextStep, 10);
@@ -174,11 +228,7 @@ function validateBookSource(book, markdown, sourcePath) {
     assertMinimumWords(errors, `Notes item ${index + 1}`, note, 8);
   }
 
-  if (!customMarkdown) {
-    errors.push("Books Radar Markdown must include a fenced md block");
-  } else {
-    assertMinimumWords(errors, "Books Radar Markdown", customMarkdown, 100);
-  }
+  assertMinimumWords(errors, "Books Radar Markdown", book.markdown, 180);
 
   validatePublicText(
     errors,
@@ -190,7 +240,7 @@ function validateBookSource(book, markdown, sourcePath) {
       book.nextStep,
       ...book.bestFor,
       ...book.notes,
-      customMarkdown,
+      book.markdown,
     ].join("\n\n"),
   );
 

@@ -60,11 +60,6 @@ export default async function BookPage({ params }: Props) {
             </p>
             <h1>{book.title}</h1>
             <p className="detail-author">by {book.author}</p>
-            <div className="hero-copy">
-              {(book.fullSummary || book.summary).split(/\n\n+/).map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
           </div>
           <aside className="book-page-meta">
             <span className={`status status-${book.status}`}>{book.status}</span>
@@ -79,9 +74,19 @@ export default async function BookPage({ params }: Props) {
           </aside>
         </section>
 
+        <section className="book-page-section summary-section">
+          <p className="meta-line">Book summary</p>
+          <h2>Summary</h2>
+          <div className="summary-copy">
+            {(book.fullSummary || book.summary).split(/\n\n+/).map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        </section>
+
         <section className="book-page-grid">
           <div className="book-page-section">
-            <h2>Why read it</h2>
+            <h2>Why George recommends it</h2>
             <p>{book.whyRead}</p>
           </div>
           <div className="book-page-section">

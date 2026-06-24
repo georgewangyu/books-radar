@@ -726,6 +726,18 @@ h2 {
   border-top: 1px solid var(--line);
 }
 
+.summary-section {
+  background: #fffdf8;
+}
+
+.summary-copy {
+  max-width: 860px;
+}
+
+.summary-copy p:last-child {
+  margin-bottom: 0;
+}
+
 .book-page-grid .book-page-section {
   border-top: 0;
 }
