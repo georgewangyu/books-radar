@@ -197,6 +197,28 @@ h2 {
   margin-bottom: 0;
 }
 
+.creator-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.creator-links a {
+  border: 1px solid #cbc4b6;
+  border-radius: 999px;
+  background: #fff;
+  color: #36342f;
+  padding: 8px 11px;
+  font-size: 12px;
+  font-weight: 820;
+  line-height: 1;
+}
+
+.creator-links a:hover {
+  border-color: var(--ink);
+}
+
 .hero-note {
   align-self: end;
   border-left: 2px solid var(--ink);

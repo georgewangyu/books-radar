@@ -41,6 +41,16 @@ const issueLabels: Record<string, string> = {
 const skillInstallCommand =
   "npx skills add georgewangyu/books-radar --skill books-radar -g";
 
+const creatorLinks = [
+  ["GitHub", "https://github.com/georgewangyu"],
+  ["X", "https://x.com/georgewangyu"],
+  ["Email", "mailto:hellogeorgehq@gmail.com"],
+  ["Instagram", "https://www.instagram.com/snackoverflowgeorge/"],
+  ["TikTok", "https://www.tiktok.com/@snackoverflowgeorge"],
+  ["YouTube", "https://www.youtube.com/@snackoverflowgeorge"],
+  ["LinkedIn", "https://www.linkedin.com/in/georgewangyu/"],
+] as const;
+
 function statusRank(book: Book) {
   if (book.status === "featured") return 3;
   if (book.status === "ready") return 2;
@@ -224,6 +234,13 @@ export function BooksRadarApp({ books }: Props) {
             Daily and weekly book recommendations from George, without turning
             reading into a social network.
           </p>
+          <nav className="creator-links" aria-label="George links">
+            {creatorLinks.map(([label, href]) => (
+              <a href={href} key={label}>
+                {label}
+              </a>
+            ))}
+          </nav>
         </div>
         <aside className="hero-note" id="today">
           <span>Today's pick</span>

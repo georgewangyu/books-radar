@@ -20,6 +20,14 @@ test.describe("Books Radar catalog", () => {
     await expect(page.getByText("Read what compounds.")).toBeVisible();
     await expect(page.getByText("Daily and weekly book recommendations")).toBeVisible();
     await expect(page.getByText("Today's pick")).toBeVisible();
+    await expect(page.getByLabel("George links").getByRole("link", { name: "Email" })).toHaveAttribute(
+      "href",
+      "mailto:hellogeorgehq@gmail.com",
+    );
+    await expect(page.getByLabel("George links").getByRole("link", { name: "Instagram" })).toHaveAttribute(
+      "href",
+      "https://www.instagram.com/snackoverflowgeorge/",
+    );
     await expect(page.getByText(`${books.length} matching books`)).toBeVisible();
     await expect(page.getByLabel("Sort")).toHaveValue("radar");
 
