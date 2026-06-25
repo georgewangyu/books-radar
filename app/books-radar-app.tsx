@@ -234,13 +234,16 @@ export function BooksRadarApp({ books }: Props) {
             Daily and weekly book recommendations from George, without turning
             reading into a social network.
           </p>
-          <nav className="creator-links" aria-label="George links">
-            {creatorLinks.map(([label, href]) => (
-              <a href={href} key={label}>
-                {label}
-              </a>
-            ))}
-          </nav>
+          <div className="creator-links-block">
+            <p className="creator-links-title">Created by George</p>
+            <nav className="creator-links" aria-label="George links">
+              {creatorLinks.map(([label, href]) => (
+                <a href={href} key={label}>
+                  {label}
+                </a>
+              ))}
+            </nav>
+          </div>
         </div>
         <aside className="hero-note" id="today">
           <span>Today's pick</span>

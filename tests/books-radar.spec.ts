@@ -20,6 +20,7 @@ test.describe("Books Radar catalog", () => {
     await expect(page.getByText("Read what compounds.")).toBeVisible();
     await expect(page.getByText("Daily and weekly book recommendations")).toBeVisible();
     await expect(page.getByText("Today's pick")).toBeVisible();
+    await expect(page.getByText("Created by George")).toBeVisible();
     await expect(page.getByLabel("George links").getByRole("link", { name: "Email" })).toHaveAttribute(
       "href",
       "mailto:hellogeorgehq@gmail.com",
