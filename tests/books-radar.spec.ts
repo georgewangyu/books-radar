@@ -1,5 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { books, getTodaysBook } from "../lib/books";
+import { readingQueue } from "../lib/reading-queue";
 
 const detailPageSample = [
   "guns-germs-and-steel",
@@ -30,6 +31,18 @@ test.describe("Books Radar catalog", () => {
     await expect(page.getByText("Read what compounds.")).toBeVisible();
     await expect(page.getByText("Daily and weekly book recommendations")).toBeVisible();
     await expect(page.getByText("Today's pick")).toBeVisible();
+    await expect(
+      page.getByLabel("Page navigation").getByRole("link", {
+        exact: true,
+        name: "Queue",
+      }),
+    ).toHaveAttribute("href", "#queue");
+    await expect(
+      page.getByRole("heading", { name: "Books to evaluate next", level: 2 }),
+    ).toBeVisible();
+    await expect(page.locator(".queue-card")).toHaveCount(readingQueue.length);
+    await expect(page.getByText("$100M Offers")).toBeVisible();
+    await expect(page.getByText("Permutation City")).toBeVisible();
     await expect(page.getByText("Created by George")).toBeVisible();
     await expect(page.getByLabel("George links").getByRole("link", { name: "Email" })).toHaveAttribute(
       "href",
@@ -153,6 +166,10 @@ test.describe("Books Radar catalog", () => {
 
     expect(metrics.scrollWidth).toBeLessThanOrEqual(metrics.innerWidth);
     await expect(page.getByRole("link", { name: "Request a recommendation" }).first()).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Books to evaluate next", level: 2 }),
+    ).toBeVisible();
+    await expect(page.locator(".queue-card")).toHaveCount(readingQueue.length);
     await expect(page.locator(".mobile-filter-bar")).toBeVisible();
     await expect(page.getByLabel("Cadence filter")).toHaveCount(0);
     await expect(page.locator(".book-nav")).toBeHidden();

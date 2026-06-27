@@ -4,6 +4,7 @@ import { FormEvent, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import type { Book } from "@/lib/books";
 import { getTodaysBook, shelves, statuses } from "@/lib/books";
+import { readingQueue } from "@/lib/reading-queue";
 
 type Status = "idle" | "submitting" | "success" | "error";
 type SortMode = "radar" | "title" | "shelf" | "newest";
@@ -225,6 +226,7 @@ export function BooksRadarApp({ books }: Props) {
         </a>
         <nav className="nav-pills" aria-label="Page navigation">
           <a href="#catalog">Catalog</a>
+          <a href="#queue">Queue</a>
           <a href="#today">Today</a>
           <a href="#request">Request</a>
         </nav>
@@ -281,6 +283,37 @@ export function BooksRadarApp({ books }: Props) {
             </button>
             <a href="#catalog">Browse the shelf</a>
           </div>
+        </div>
+      </section>
+
+      <section className="reading-queue" id="queue" aria-labelledby="queue-title">
+        <div className="queue-heading">
+          <div>
+            <p className="section-kicker">Reading queue</p>
+            <h2 id="queue-title">Books to evaluate next</h2>
+          </div>
+          <p>
+            Candidate reads before they become full Books Radar notes: conversion books
+            for turning audience into a product path, plus future-facing fiction and AI
+            books for new product ideas.
+          </p>
+        </div>
+        <div className="queue-grid">
+          {readingQueue.map((book, index) => (
+            <article className="queue-card" key={book.id}>
+              <div className="queue-card-top">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <strong>{book.lane}</strong>
+              </div>
+              <h3>{book.title}</h3>
+              <p className="queue-author">by {book.author}</p>
+              <p>{book.reason}</p>
+              <div className="queue-read-for">
+                <span>Read for</span>
+                <p>{book.readFor}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 

@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 124px;
 }
 
 body {
@@ -156,6 +157,7 @@ h2 {
 
 .hero,
 .agent-setup,
+.reading-queue,
 .book-grid,
 .request-section,
 .book-page {
@@ -241,6 +243,7 @@ h2 {
 
 .hero-note span,
 .meta-line,
+.section-kicker,
 .rail-title,
 .label,
 .select-control span,
@@ -332,6 +335,97 @@ h2 {
 .detail-actions a {
   background: transparent;
   color: #fff;
+}
+
+.reading-queue {
+  border-top: 0;
+  padding: 32px 36px;
+  background: #fffdf8;
+  scroll-margin-top: 124px;
+}
+
+.queue-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.7fr);
+  gap: 24px;
+  align-items: end;
+  margin-bottom: 22px;
+}
+
+.queue-heading h2 {
+  margin-bottom: 0;
+}
+
+.queue-heading > p {
+  margin-bottom: 0;
+  color: #4d4a44;
+  line-height: 1.55;
+}
+
+.section-kicker {
+  margin: 0 0 8px;
+}
+
+.queue-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.queue-card {
+  display: grid;
+  gap: 9px;
+  border: 1px solid #d7d0c1;
+  border-radius: 12px;
+  background: #fff;
+  padding: 16px;
+}
+
+.queue-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 820;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.queue-card h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 24px;
+  line-height: 1.05;
+}
+
+.queue-card p {
+  margin-bottom: 0;
+  color: #4d4a44;
+  line-height: 1.48;
+}
+
+.queue-author {
+  margin-top: -4px;
+  color: var(--muted) !important;
+  font-size: 13px;
+}
+
+.queue-read-for {
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+
+.queue-read-for span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--faint);
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 820;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .book-grid {
@@ -825,9 +919,14 @@ h2 {
 }
 
 @media (max-width: 980px) {
+  html {
+    scroll-padding-top: 0;
+  }
+
   .topbar,
   .hero,
   .agent-setup,
+  .queue-heading,
   .book-grid,
   .request-section,
   .book-page-hero,
@@ -855,7 +954,8 @@ h2 {
   }
 
   .catalog-toolbar,
-  .book-columns {
+  .book-columns,
+  .queue-grid {
     grid-template-columns: 1fr;
   }
 
@@ -900,6 +1000,7 @@ h2 {
 
   .hero,
   .agent-setup,
+  .reading-queue,
   .book-main,
   .request-section,
   .book-page-hero,
