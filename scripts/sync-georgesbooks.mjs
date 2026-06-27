@@ -24,6 +24,16 @@ const unsafePublicPatterns = [
   { label: "email address", pattern: /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i },
 ];
 
+const publicQualityPatterns = [
+  { label: "awkward AI shelf article", pattern: /\bas a ai\b/i },
+  { label: "lowercase AI shelf label", pattern: /\bai & future\b/ },
+  { label: "duplicated generated sentence", pattern: /\bThis The useful move\b/i },
+  {
+    label: "duplicated recommendation sentence",
+    pattern: /It also gives George[\s\S]{0,300}?It also gives George[\s\S]{0,300}?It also gives George/i,
+  },
+];
+
 function parseFrontmatter(markdown) {
   const match = markdown.match(/^---\n([\s\S]*?)\n---\n?/);
   const fields = {};
@@ -124,6 +134,12 @@ function assertMinimumWords(errors, field, text, minimum) {
 
 function validatePublicText(errors, label, text) {
   for (const { label: patternLabel, pattern } of unsafePublicPatterns) {
+    if (pattern.test(text)) {
+      errors.push(`${label} contains ${patternLabel}`);
+    }
+  }
+
+  for (const { label: patternLabel, pattern } of publicQualityPatterns) {
     if (pattern.test(text)) {
       errors.push(`${label} contains ${patternLabel}`);
     }

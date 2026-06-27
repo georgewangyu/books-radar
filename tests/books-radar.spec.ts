@@ -47,10 +47,11 @@ test.describe("Books Radar catalog", () => {
       page.getByText("Harry Potter and the Methods of Rationality").first(),
     ).toBeVisible();
 
+    const startupCount = books.filter((book) => book.shelf === "Startups").length;
     await page.getByRole("button", { name: "Clear filters" }).click();
-    await page.getByRole("button", { name: "Startups 1" }).click();
+    await page.getByRole("button", { name: `Startups ${startupCount}` }).click();
     await expect(page.getByText("Running Lean").first()).toBeVisible();
-    await expect(page.getByText("1 matching books")).toBeVisible();
+    await expect(page.getByText(`${startupCount} matching books`)).toBeVisible();
 
     await page.getByRole("button", { name: "Clear filters" }).click();
     await page.getByPlaceholder("Search books, authors, shelves...").fill("Tomorrow");
