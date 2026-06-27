@@ -154,6 +154,7 @@ test.describe("Books Radar catalog", () => {
     expect(metrics.scrollWidth).toBeLessThanOrEqual(metrics.innerWidth);
     await expect(page.getByRole("link", { name: "Request a recommendation" }).first()).toBeVisible();
     await expect(page.locator(".mobile-filter-bar")).toBeVisible();
+    await expect(page.getByLabel("Cadence filter")).toHaveCount(0);
     await expect(page.locator(".book-nav")).toBeHidden();
   });
 });

@@ -3,7 +3,7 @@
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import type { Book } from "@/lib/books";
-import { cadences, getTodaysBook, shelves, statuses } from "@/lib/books";
+import { getTodaysBook, shelves, statuses } from "@/lib/books";
 
 type Status = "idle" | "submitting" | "success" | "error";
 type SortMode = "radar" | "title" | "shelf" | "newest";
@@ -103,7 +103,6 @@ export function BooksRadarApp({ books }: Props) {
   const todaysBook = getTodaysBook();
   const [query, setQuery] = useState("");
   const [shelf, setShelf] = useState("All");
-  const [cadence, setCadence] = useState("All");
   const [status, setStatus] = useState("All");
   const [sortMode, setSortMode] = useState<SortMode>("radar");
   const [selectedId, setSelectedId] = useState(todaysBook.id);
@@ -121,23 +120,12 @@ export function BooksRadarApp({ books }: Props) {
       ),
     [books],
   );
-  const cadenceCounts = useMemo(
-    () =>
-      new Map<string, number>(
-        cadences.map((item) => [
-          item,
-          books.filter((book) => book.cadence === item).length,
-        ]),
-      ),
-    [books],
-  );
 
   const filteredBooks = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
 
     return books.filter((book) => {
       const matchesShelf = shelf === "All" || book.shelf === shelf;
-      const matchesCadence = cadence === "All" || book.cadence === cadence;
       const matchesStatus = status === "All" || book.status === status;
       const haystack = [
         book.title,
@@ -157,12 +145,11 @@ export function BooksRadarApp({ books }: Props) {
 
       return (
         matchesShelf &&
-        matchesCadence &&
         matchesStatus &&
         (!normalizedQuery || haystack.includes(normalizedQuery))
       );
     });
-  }, [books, cadence, query, shelf, status]);
+  }, [books, query, shelf, status]);
 
   const sortedBooks = useMemo(
     () => sortBooks(filteredBooks, sortMode),
@@ -317,25 +304,6 @@ export function BooksRadarApp({ books }: Props) {
               </button>
             ))}
           </div>
-
-          <p className="rail-title lower">Cadence</p>
-          <div className="rail-list">
-            {["All", ...cadences].map((item) => (
-              <button
-                className={cadence === item ? "rail-item active" : "rail-item"}
-                key={item}
-                onClick={() => setCadence(item)}
-                type="button"
-              >
-                <span>{item}</span>
-                <span>
-                  {item === "All"
-                    ? books.length
-                    : cadenceCounts.get(item) ?? 0}
-                </span>
-              </button>
-            ))}
-          </div>
         </aside>
 
         <section className="book-main" aria-label="Books">
@@ -351,21 +319,6 @@ export function BooksRadarApp({ books }: Props) {
                 {shelves.map((item) => (
                   <option value={item} key={item}>
                     {item} ({shelfCounts.get(item) ?? 0})
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label className="select-control">
-              <span>Cadence</span>
-              <select
-                aria-label="Cadence filter"
-                value={cadence}
-                onChange={(event) => setCadence(event.target.value)}
-              >
-                <option value="All">All cadence ({books.length})</option>
-                {cadences.map((item) => (
-                  <option value={item} key={item}>
-                    {item} ({cadenceCounts.get(item) ?? 0})
                   </option>
                 ))}
               </select>
@@ -417,13 +370,12 @@ export function BooksRadarApp({ books }: Props) {
             <span className="sort-note">
               {sortOptions.find(([value]) => value === sortMode)?.[1]}
             </span>
-            {(query || shelf !== "All" || cadence !== "All" || status !== "All") && (
+            {(query || shelf !== "All" || status !== "All") && (
               <button
                 className="text-button"
                 onClick={() => {
                   setQuery("");
                   setShelf("All");
-                  setCadence("All");
                   setStatus("All");
                   setSortMode("radar");
                 }}
