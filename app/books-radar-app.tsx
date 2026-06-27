@@ -111,6 +111,26 @@ export function BooksRadarApp({ books }: Props) {
   const [formStatus, setFormStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
   const [copied, setCopied] = useState("");
+  const shelfCounts = useMemo(
+    () =>
+      new Map<string, number>(
+        shelves.map((item) => [
+          item,
+          books.filter((book) => book.shelf === item).length,
+        ]),
+      ),
+    [books],
+  );
+  const cadenceCounts = useMemo(
+    () =>
+      new Map<string, number>(
+        cadences.map((item) => [
+          item,
+          books.filter((book) => book.cadence === item).length,
+        ]),
+      ),
+    [books],
+  );
 
   const filteredBooks = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -292,7 +312,7 @@ export function BooksRadarApp({ books }: Props) {
                 <span>
                   {item === "All"
                     ? books.length
-                    : books.filter((book) => book.shelf === item).length}
+                    : shelfCounts.get(item) ?? 0}
                 </span>
               </button>
             ))}
@@ -311,7 +331,7 @@ export function BooksRadarApp({ books }: Props) {
                 <span>
                   {item === "All"
                     ? books.length
-                    : books.filter((book) => book.cadence === item).length}
+                    : cadenceCounts.get(item) ?? 0}
                 </span>
               </button>
             ))}
@@ -319,6 +339,39 @@ export function BooksRadarApp({ books }: Props) {
         </aside>
 
         <section className="book-main" aria-label="Books">
+          <div className="mobile-filter-bar" aria-label="Compact catalog filters">
+            <label className="select-control">
+              <span>Shelf</span>
+              <select
+                aria-label="Shelf filter"
+                value={shelf}
+                onChange={(event) => setShelf(event.target.value)}
+              >
+                <option value="All">All shelves ({books.length})</option>
+                {shelves.map((item) => (
+                  <option value={item} key={item}>
+                    {item} ({shelfCounts.get(item) ?? 0})
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="select-control">
+              <span>Cadence</span>
+              <select
+                aria-label="Cadence filter"
+                value={cadence}
+                onChange={(event) => setCadence(event.target.value)}
+              >
+                <option value="All">All cadence ({books.length})</option>
+                {cadences.map((item) => (
+                  <option value={item} key={item}>
+                    {item} ({cadenceCounts.get(item) ?? 0})
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+
           <div className="catalog-toolbar">
             <label className="search-input">
               <span className="sr-only">Search books</span>

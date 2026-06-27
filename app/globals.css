@@ -384,6 +384,10 @@ h2 {
   padding: 22px;
 }
 
+.mobile-filter-bar {
+  display: none;
+}
+
 .catalog-toolbar {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 360px;
@@ -840,12 +844,14 @@ h2 {
   }
 
   .book-nav {
-    border-right: 0;
-    border-bottom: 1px solid #dce2df;
+    display: none;
   }
 
-  .rail-list {
+  .mobile-filter-bar {
+    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 12px;
   }
 
   .catalog-toolbar,

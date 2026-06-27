@@ -49,7 +49,12 @@ test.describe("Books Radar catalog", () => {
 
     const startupCount = books.filter((book) => book.shelf === "Startups").length;
     await page.getByRole("button", { name: "Clear filters" }).click();
-    await page.getByRole("button", { name: `Startups ${startupCount}` }).click();
+    const startupRailButton = page.getByRole("button", { name: `Startups ${startupCount}` });
+    if (await startupRailButton.isVisible()) {
+      await startupRailButton.click();
+    } else {
+      await page.getByLabel("Shelf filter").selectOption("Startups");
+    }
     await expect(page.getByText("Running Lean").first()).toBeVisible();
     await expect(page.getByText(`${startupCount} matching books`)).toBeVisible();
 
@@ -148,6 +153,8 @@ test.describe("Books Radar catalog", () => {
 
     expect(metrics.scrollWidth).toBeLessThanOrEqual(metrics.innerWidth);
     await expect(page.getByRole("link", { name: "Request a recommendation" }).first()).toBeVisible();
+    await expect(page.locator(".mobile-filter-bar")).toBeVisible();
+    await expect(page.locator(".book-nav")).toBeHidden();
   });
 });
 
