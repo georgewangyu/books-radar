@@ -249,13 +249,12 @@ export function BooksRadarApp({ books }: Props) {
           <span>Today's pick</span>
           <strong>{todaysBook.title}</strong>
           <p>{todaysBook.summary}</p>
-          <button
+          <Link
             className="text-button"
-            onClick={() => setSelectedId(todaysBook.id)}
-            type="button"
+            href={`/books/${todaysBook.id}`}
           >
             Open note
-          </button>
+          </Link>
         </aside>
       </section>
 

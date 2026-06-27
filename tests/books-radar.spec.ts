@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { books } from "../lib/books";
+import { books, getTodaysBook } from "../lib/books";
 
 const detailPageSample = [
   "guns-germs-and-steel",
@@ -10,6 +10,16 @@ const detailPageSample = [
   .filter((book): book is (typeof books)[number] => Boolean(book));
 
 test.describe("Books Radar catalog", () => {
+  test("hero open note navigates to the full book page", async ({ page }) => {
+    const todaysBook = getTodaysBook();
+
+    await page.goto("/");
+
+    await page.getByRole("link", { name: "Open note" }).click();
+    await expect(page).toHaveURL(new RegExp(`/books/${todaysBook.id}$`));
+    await expect(page.getByRole("heading", { name: todaysBook.title, level: 1 })).toBeVisible();
+  });
+
   test("catalog controls, selected detail, and book links work", async ({ page }) => {
     await page.goto("/");
 
