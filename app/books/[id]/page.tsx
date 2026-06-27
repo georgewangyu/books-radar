@@ -44,6 +44,7 @@ export default async function BookPage({ params }: Props) {
         </Link>
         <nav className="nav-pills" aria-label="Book page navigation">
           <Link href="/">Catalog</Link>
+          <Link href="/queue">Explore</Link>
           <Link href="/#today">Today</Link>
           <Link href="/#request">Request</Link>
         </nav>

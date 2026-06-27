@@ -139,6 +139,11 @@ h2 {
   color: var(--ink);
 }
 
+.nav-pills a.active {
+  background: var(--surface);
+  color: var(--ink);
+}
+
 .nav-submit {
   justify-self: end;
 }
@@ -344,12 +349,23 @@ h2 {
   scroll-margin-top: 124px;
 }
 
+.reading-queue-page {
+  margin-top: 18px;
+  border-top: 1px solid rgba(22, 22, 22, 0.13);
+  border-radius: 22px;
+}
+
 .queue-heading {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.7fr);
   gap: 24px;
   align-items: end;
   margin-bottom: 22px;
+}
+
+.queue-heading h1 {
+  margin-bottom: 0;
+  font-size: clamp(42px, 6vw, 74px);
 }
 
 .queue-heading h2 {
@@ -393,6 +409,7 @@ h2 {
   text-transform: uppercase;
 }
 
+.queue-card h2,
 .queue-card h3 {
   margin: 0;
   font-family: var(--serif);
