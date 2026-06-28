@@ -170,9 +170,9 @@ test.describe("Books Radar catalog", () => {
   test("explore page lists candidate books separately from the shelf", async ({ page }) => {
     await page.goto("/queue");
 
-    await expect(page).toHaveTitle("Books to Explore Next | Books Radar");
+    await expect(page).toHaveTitle("Books George Is Reading Next | Books Radar");
     await expect(
-      page.getByRole("heading", { name: "Books to explore next", level: 1 }),
+      page.getByRole("heading", { name: "Books George is reading next", level: 1 }),
     ).toBeVisible();
     await expect(page.locator(".queue-card")).toHaveCount(readingQueue.length);
     await expect(page.getByText("$100M Offers")).toBeVisible();

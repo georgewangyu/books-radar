@@ -3,9 +3,9 @@ import Link from "next/link";
 import { readingQueue } from "@/lib/reading-queue";
 
 export const metadata: Metadata = {
-  title: "Books to Explore Next | Books Radar",
+  title: "Books George Is Reading Next | Books Radar",
   description:
-    "Candidate books George is considering before they become full Books Radar notes.",
+    "Books George is planning to read next before they become full Books Radar notes.",
   alternates: {
     canonical: "/queue",
   },
@@ -35,13 +35,13 @@ export default function QueuePage() {
       <section className="reading-queue reading-queue-page" aria-labelledby="queue-title">
         <div className="queue-heading">
           <div>
-            <p className="section-kicker">Reading queue</p>
-            <h1 id="queue-title">Books to explore next</h1>
+            <p className="section-kicker">George's next reads</p>
+            <h1 id="queue-title">Books George is reading next</h1>
           </div>
           <p>
-            Candidate reads before they become full Books Radar notes: conversion books
-            for turning audience into a product path, plus future-facing fiction and AI
-            books for new product ideas.
+            These are books George is planning to read next before they become full
+            Books Radar notes: conversion books for turning audience into a product
+            path, plus future-facing fiction and AI books for new product ideas.
           </p>
         </div>
         <div className="queue-grid">
