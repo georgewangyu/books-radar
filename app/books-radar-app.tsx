@@ -40,6 +40,7 @@ const issueLabels: Record<string, string> = {
 
 const skillInstallCommand =
   "npx skills add georgewangyu/books-radar --skill books-radar -g";
+const pageSize = 12;
 
 const creatorLinks = [
   ["GitHub", "https://github.com/georgewangyu"],
@@ -110,6 +111,7 @@ export function BooksRadarApp({ books }: Props) {
   const [formStatus, setFormStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
   const [copied, setCopied] = useState("");
+  const [page, setPage] = useState(1);
   const shelfCounts = useMemo(
     () =>
       new Map<string, number>(
@@ -155,14 +157,26 @@ export function BooksRadarApp({ books }: Props) {
     () => sortBooks(filteredBooks, sortMode),
     [filteredBooks, sortMode],
   );
+  const pageCount = Math.max(1, Math.ceil(sortedBooks.length / pageSize));
+  const currentPage = Math.min(page, pageCount);
+  const pageStart = (currentPage - 1) * pageSize;
+  const pageEnd = Math.min(pageStart + pageSize, sortedBooks.length);
+  const visibleBooks = sortedBooks.slice(pageStart, pageEnd);
   const selectedBook =
-    books.find((book) => book.id === selectedId) || sortedBooks[0] || todaysBook;
+    visibleBooks.find((book) => book.id === selectedId) ||
+    visibleBooks[0] ||
+    sortedBooks[0] ||
+    todaysBook;
 
   useEffect(() => {
-    if (sortedBooks.length > 0 && !sortedBooks.some((book) => book.id === selectedId)) {
-      setSelectedId(sortedBooks[0].id);
+    setPage(1);
+  }, [query, shelf, sortMode, status]);
+
+  useEffect(() => {
+    if (visibleBooks.length > 0 && !visibleBooks.some((book) => book.id === selectedId)) {
+      setSelectedId(visibleBooks[0].id);
     }
-  }, [selectedId, sortedBooks]);
+  }, [selectedId, visibleBooks]);
 
   async function copyBookNote(book: Book) {
     await navigator.clipboard.writeText(book.markdown);
@@ -366,7 +380,9 @@ export function BooksRadarApp({ books }: Props) {
           <div className="list-meta">
             <span>
               {sortedBooks.length} matching books
-              {sortedBooks.length > 0 ? ` / ${books.length} on the shelf` : ""}
+              {sortedBooks.length > 0
+                ? ` / showing ${pageStart + 1}-${pageEnd}`
+                : ""}
             </span>
             <span className="sort-note">
               {sortOptions.find(([value]) => value === sortMode)?.[1]}
@@ -379,6 +395,7 @@ export function BooksRadarApp({ books }: Props) {
                   setShelf("All");
                   setStatus("All");
                   setSortMode("radar");
+                  setPage(1);
                 }}
                 type="button"
               >
@@ -388,45 +405,71 @@ export function BooksRadarApp({ books }: Props) {
           </div>
 
           <div className="book-columns">
-            <div className="book-table">
-              {sortedBooks.length > 0 ? (
-                sortedBooks.map((book) => (
-                  <article
-                    className={selectedBook.id === book.id ? "book-row selected" : "book-row"}
-                    id={book.id}
-                    key={book.id}
-                    onFocus={() => setSelectedId(book.id)}
-                    onMouseEnter={() => setSelectedId(book.id)}
+            <div className="book-list-panel">
+              <div className="book-table">
+                {visibleBooks.length > 0 ? (
+                  visibleBooks.map((book) => (
+                    <article
+                      className={selectedBook.id === book.id ? "book-row selected" : "book-row"}
+                      id={book.id}
+                      key={book.id}
+                      onFocus={() => setSelectedId(book.id)}
+                      onMouseEnter={() => setSelectedId(book.id)}
+                    >
+                      <Link
+                        className="book-row-main"
+                        href={`/books/${book.id}`}
+                      >
+                        <span className="book-kicker">
+                          {book.shelf} / {book.cadence}
+                        </span>
+                        <span className="book-title">{book.title}</span>
+                        <span className="book-author">by {book.author}</span>
+                        <span className="book-desc">{book.summary}</span>
+                      </Link>
+                      <button
+                        className="copy book-copy"
+                        onClick={() => copyBookNote(book)}
+                        type="button"
+                      >
+                        {copied === book.id ? "Copied" : "Copy note"}
+                      </button>
+                      <Link className="text-button row-open" href={`/books/${book.id}`}>
+                        Open
+                      </Link>
+                    </article>
+                  ))
+                ) : (
+                  <div className="empty-state">
+                    <h2>No matching books</h2>
+                    <p>Try clearing a filter or request the recommendation you expected.</p>
+                  </div>
+                )}
+              </div>
+
+              {sortedBooks.length > pageSize ? (
+                <nav className="pagination" aria-label="Book pagination">
+                  <button
+                    className="page-button"
+                    disabled={currentPage === 1}
+                    onClick={() => setPage((value) => Math.max(1, value - 1))}
+                    type="button"
                   >
-                    <Link
-                      className="book-row-main"
-                      href={`/books/${book.id}`}
-                    >
-                      <span className="book-kicker">
-                        {book.shelf} / {book.cadence}
-                      </span>
-                      <span className="book-title">{book.title}</span>
-                      <span className="book-author">by {book.author}</span>
-                      <span className="book-desc">{book.summary}</span>
-                    </Link>
-                    <button
-                      className="copy book-copy"
-                      onClick={() => copyBookNote(book)}
-                      type="button"
-                    >
-                      {copied === book.id ? "Copied" : "Copy note"}
-                    </button>
-                    <Link className="text-button row-open" href={`/books/${book.id}`}>
-                      Open
-                    </Link>
-                  </article>
-                ))
-              ) : (
-                <div className="empty-state">
-                  <h2>No matching books</h2>
-                  <p>Try clearing a filter or request the recommendation you expected.</p>
-                </div>
-              )}
+                    Previous
+                  </button>
+                  <span className="page-status">
+                    Page {currentPage} of {pageCount}
+                  </span>
+                  <button
+                    className="page-button"
+                    disabled={currentPage === pageCount}
+                    onClick={() => setPage((value) => Math.min(pageCount, value + 1))}
+                    type="button"
+                  >
+                    Next
+                  </button>
+                </nav>
+              ) : null}
             </div>
 
             <aside className="book-detail" aria-label="Selected book detail">

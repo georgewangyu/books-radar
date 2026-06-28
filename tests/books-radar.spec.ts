@@ -48,6 +48,8 @@ test.describe("Books Radar catalog", () => {
       "https://www.instagram.com/snackoverflowgeorge/",
     );
     await expect(page.getByText(`${books.length} matching books`)).toBeVisible();
+    await expect(page.getByText("showing 1-12")).toBeVisible();
+    await expect(page.locator(".book-row")).toHaveCount(Math.min(12, books.length));
     await expect(page.getByLabel("Sort")).toHaveValue("radar");
 
     await page.getByPlaceholder("Search books, authors, shelves...").fill("rationality");
@@ -76,6 +78,28 @@ test.describe("Books Radar catalog", () => {
     ).toBeVisible();
     await expect(page.getByRole("heading", { name: "Copyable Markdown", level: 2 })).toBeVisible();
     await expect(page.getByRole("button", { name: "Copy note" })).toBeVisible();
+  });
+
+  test("pagination moves through the shelf and resets for search", async ({ page }) => {
+    await page.goto("/");
+
+    await expect(page.getByText(`Page 1 of ${Math.ceil(books.length / 12)}`)).toBeVisible();
+    await expect(page.getByText("showing 1-12")).toBeVisible();
+    await expect(page.getByRole("button", { name: "Previous" })).toBeDisabled();
+    await expect(page.locator(".book-row")).toHaveCount(12);
+
+    await page.getByRole("button", { name: "Next" }).click();
+    await expect(page.getByText("Page 2 of")).toBeVisible();
+    await expect(page.getByText("showing 13-24")).toBeVisible();
+    await expect(page.getByRole("button", { name: "Previous" })).toBeEnabled();
+    await expect(page.locator(".book-row")).toHaveCount(12);
+
+    await page.getByPlaceholder("Search books, authors, shelves...").fill("rationality");
+    await expect(
+      page.getByText("Harry Potter and the Methods of Rationality").first(),
+    ).toBeVisible();
+    await expect(page.getByText("Page 1 of")).toHaveCount(0);
+    await expect(page.getByRole("button", { name: "Next" })).toHaveCount(0);
   });
 
   test("sort modes reorder the shelf", async ({ page }) => {
