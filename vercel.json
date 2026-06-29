@@ -21,6 +21,28 @@
       ],
       "destination": "https://booksradar.snackoverflowgeorge.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "george-books-radar.vercel.app"
+        }
+      ],
+      "destination": "https://booksradar.snackoverflowgeorge.com",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "george-books-radar.vercel.app"
+        }
+      ],
+      "destination": "https://booksradar.snackoverflowgeorge.com/:path*",
+      "permanent": true
     }
   ]
 }

@@ -131,7 +131,22 @@ test.describe("Books Radar catalog", () => {
 
   test("setup command copies from the agent skill card", async ({ page, context }) => {
     await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+    await page.route("**/api/leads", async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({ ok: true }),
+      });
+    });
     await page.goto("/");
+
+    await page.getByLabel("Name").fill("George Test");
+    await page.getByLabel("Email").fill("george@example.com");
+    await page.getByRole("button", { name: "Unlock install command" }).click();
+    await expect(page.getByRole("link", { name: "Star the repo" })).toHaveAttribute(
+      "href",
+      "https://github.com/georgewangyu/books-radar",
+    );
 
     await page.getByRole("button", { name: "Copy command" }).click();
     await expect(page.getByRole("button", { name: "Copied" })).toBeVisible();

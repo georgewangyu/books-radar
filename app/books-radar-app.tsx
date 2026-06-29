@@ -40,6 +40,8 @@ const issueLabels: Record<string, string> = {
 
 const skillInstallCommand =
   "npx skills add georgewangyu/books-radar --skill books-radar -g";
+const skillRepoUrl = "https://github.com/georgewangyu/books-radar";
+const leadStorageKey = "books-radar-install-unlocked";
 const pageSize = 12;
 
 const creatorLinks = [
@@ -51,6 +53,11 @@ const creatorLinks = [
   ["YouTube", "https://www.youtube.com/@snackoverflowgeorge"],
   ["LinkedIn", "https://www.linkedin.com/in/georgewangyu/"],
 ] as const;
+
+const leadLabels: Record<string, string> = {
+  email: "Email",
+  name: "Name",
+};
 
 function statusRank(book: Book) {
   if (book.status === "featured") return 3;
@@ -100,6 +107,22 @@ async function errorMessageFor(response: Response) {
     : body?.error || "Please check the form and try again.";
 }
 
+async function leadErrorMessageFor(response: Response) {
+  if (response.status !== 400) {
+    return "Could not unlock the install command. Try again in a moment.";
+  }
+
+  const body = (await response.json().catch(() => null)) as ErrorResponse | null;
+  const fieldMessages = Object.entries(body?.issues || {}).flatMap(
+    ([field, messages]) =>
+      (messages || []).map((message) => `${leadLabels[field] || field}: ${message}`),
+  );
+
+  return fieldMessages.length > 0
+    ? fieldMessages.join(" ")
+    : body?.error || "Please check the fields and try again.";
+}
+
 export function BooksRadarApp({ books }: Props) {
   const todaysBook = getTodaysBook();
   const [query, setQuery] = useState("");
@@ -109,7 +132,10 @@ export function BooksRadarApp({ books }: Props) {
   const [selectedId, setSelectedId] = useState(todaysBook.id);
   const [submissionType, setSubmissionType] = useState("request-book");
   const [formStatus, setFormStatus] = useState<Status>("idle");
+  const [leadStatus, setLeadStatus] = useState<Status>("idle");
+  const [leadUnlocked, setLeadUnlocked] = useState(false);
   const [error, setError] = useState("");
+  const [leadError, setLeadError] = useState("");
   const [copied, setCopied] = useState("");
   const [page, setPage] = useState(1);
   const shelfCounts = useMemo(
@@ -178,6 +204,10 @@ export function BooksRadarApp({ books }: Props) {
     }
   }, [selectedId, visibleBooks]);
 
+  useEffect(() => {
+    setLeadUnlocked(window.localStorage.getItem(leadStorageKey) === "true");
+  }, []);
+
   async function copyBookNote(book: Book) {
     await navigator.clipboard.writeText(book.markdown);
     setCopied(book.id);
@@ -188,6 +218,41 @@ export function BooksRadarApp({ books }: Props) {
     await navigator.clipboard.writeText(skillInstallCommand);
     setCopied("setup-command");
     window.setTimeout(() => setCopied(""), 1400);
+  }
+
+  async function onLeadSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const formElement = event.currentTarget;
+    setLeadStatus("submitting");
+    setLeadError("");
+
+    const form = new FormData(formElement);
+    const payload = {
+      email: String(form.get("email") || ""),
+      name: String(form.get("name") || ""),
+      website: String(form.get("website") || ""),
+    };
+
+    try {
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        setLeadStatus("error");
+        setLeadError(await leadErrorMessageFor(response));
+        return;
+      }
+
+      window.localStorage.setItem(leadStorageKey, "true");
+      setLeadUnlocked(true);
+      setLeadStatus("success");
+    } catch {
+      setLeadStatus("error");
+      setLeadError("Could not unlock the install command. Try again in a moment.");
+    }
   }
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
@@ -288,15 +353,53 @@ export function BooksRadarApp({ books }: Props) {
             and a small prompt for what to do with the book next.
           </p>
         </div>
-        <div className="setup-command">
-          <code>{skillInstallCommand}</code>
-          <div className="setup-actions">
-            <button onClick={copySetupCommand} type="button">
-              {copied === "setup-command" ? "Copied" : "Copy command"}
-            </button>
-            <a href="#catalog">Browse the shelf</a>
+        {leadUnlocked ? (
+          <div className="setup-command" aria-live="polite">
+            <code>{skillInstallCommand}</code>
+            <div className="setup-actions">
+              <button onClick={copySetupCommand} type="button">
+                {copied === "setup-command" ? "Copied" : "Copy command"}
+              </button>
+              <a href={skillRepoUrl}>Star the repo</a>
+              <a href="#catalog">Browse the shelf</a>
+            </div>
+            <p className="setup-support">
+              Star Books Radar to save it and support the project.
+            </p>
           </div>
-        </div>
+        ) : (
+          <form className="unlock-form" onSubmit={onLeadSubmit}>
+            <input className="trap" name="website" tabIndex={-1} autoComplete="off" />
+            <label>
+              <span>Name</span>
+              <input
+                name="name"
+                autoComplete="name"
+                placeholder="Your name"
+                required
+              />
+            </label>
+            <label>
+              <span>Email</span>
+              <input
+                name="email"
+                autoComplete="email"
+                placeholder="you@example.com"
+                required
+                type="email"
+              />
+            </label>
+            <button disabled={leadStatus === "submitting"} type="submit">
+              {leadStatus === "submitting" ? "Unlocking..." : "Unlock install command"}
+            </button>
+            <p className="unlock-note">
+              Unlocks the skill command and occasional Radar updates. No spam.
+            </p>
+            {leadStatus === "error" ? (
+              <div className="notice error">{leadError}</div>
+            ) : null}
+          </form>
+        )}
       </section>
 
       <section className="book-grid" id="catalog" aria-label="Books catalog">

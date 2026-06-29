@@ -1,5 +1,7 @@
 import type { BookSubmission } from "./submission-schema";
 
+const sourceRepo = "books-radar";
+
 const typeLabels: Record<BookSubmission["submissionType"], string> = {
   "submit-book": "type:submit-book",
   "request-book": "type:request-book",
@@ -23,7 +25,8 @@ export function issueTitle(submission: BookSubmission) {
 
 export function issueLabels(submission: BookSubmission) {
   return [
-    "books-radar",
+    sourceRepo,
+    `source-repo:${sourceRepo}`,
     "status:needs-triage",
     typeLabels[submission.submissionType],
     `visibility:${submission.visibility}`,
@@ -41,6 +44,7 @@ export function issueBody(submission: BookSubmission) {
     "",
     `**Type:** ${typeTitles[submission.submissionType]}`,
     `**Visibility:** ${visibility}`,
+    `**Source repo:** ${sourceRepo}`,
     `**Handle:** ${handle}`,
     "",
     "## Title",

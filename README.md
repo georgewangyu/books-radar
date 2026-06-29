@@ -59,6 +59,28 @@ The agent walks users through:
 Settings are saved locally in `~/.books-radar/config.json`. Delivery
 keys, if used, are saved locally in `~/.books-radar/.env`.
 
+## Website Lead Capture
+
+The homepage install card asks for name and email before revealing the copyable
+install command. Submissions are saved server-side into a shared Supabase table
+called `radar_leads`; no Supabase key is exposed to the browser.
+
+Create the table in the Supabase SQL editor, or with `psql`:
+
+```sh
+psql "$SUPABASE_DB_URL" -f docs/radar-leads-supabase.sql
+```
+
+Then configure the deployment with:
+
+```env
+SUPABASE_URL=https://<project-ref>.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=<server-side-service-role-key>
+```
+
+`radar_leads` upserts by `(product, email)`, so repeated unlocks update the
+same contact instead of creating noisy duplicates.
+
 ## Local Development
 
 ```sh
@@ -154,10 +176,15 @@ Server-side GitHub issue creation uses:
 
 ```env
 GITHUB_TOKEN=
-GITHUB_OWNER=
-GITHUB_REPO=books-radar
-GITHUB_PRIVATE_REPO=georgesbooks
+GITHUB_OWNER=georgewangyu
+GITHUB_REPO=audience-request-form
+GITHUB_PRIVATE_REPO=audience-private-intake
 BOOKS_REQUEST_ALLOWED_ORIGIN=
 ```
+
+Public submissions create issues in `georgewangyu/audience-request-form`.
+Private submissions create issues in `georgewangyu/audience-private-intake`.
+Books Radar adds `books-radar` and `source-repo:books-radar` labels so the
+shared queue remains triageable.
 
 Keep tokens server-side. Do not prefix them with `NEXT_PUBLIC_`.
