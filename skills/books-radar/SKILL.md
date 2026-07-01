@@ -1,6 +1,14 @@
 ---
 name: books-radar
 description: Use when selecting, recommending, or digesting books from Books Radar.
+memory_tags:
+  - domain:books
+  - workflow:book-recommendation
+  - skill_role:researcher
+  - repo_boundary:tools
+  - inputs:book-catalog
+  - outputs:book-digest
+  - risk:low
 ---
 
 # Books Radar
