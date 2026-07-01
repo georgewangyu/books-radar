@@ -201,6 +201,7 @@ test.describe("Books Radar catalog", () => {
     expect(metrics.scrollWidth).toBeLessThanOrEqual(metrics.innerWidth);
     await expect(page.getByRole("link", { name: "Request a recommendation" }).first()).toBeVisible();
     await expect(page.locator(".queue-card")).toHaveCount(0);
+    await expect(page.locator(".sci-fi-card")).toHaveCount(0);
     await expect(page.locator(".mobile-filter-bar")).toBeVisible();
     await expect(page.getByLabel("Cadence filter")).toHaveCount(0);
     await expect(page.locator(".book-nav")).toBeHidden();
@@ -209,13 +210,36 @@ test.describe("Books Radar catalog", () => {
   test("explore page lists candidate books separately from the shelf", async ({ page }) => {
     await page.goto("/queue");
 
-    await expect(page).toHaveTitle("Books George Is Reading Next | Books Radar");
+    await expect(page).toHaveTitle("Explore Books | Books Radar");
     await expect(
-      page.getByRole("heading", { name: "Books George is reading next", level: 1 }),
+      page.getByRole("heading", { name: "Books to think with next", level: 1 }),
     ).toBeVisible();
+    await expect(page.getByRole("tab", { name: "General reading" })).toHaveAttribute(
+      "aria-selected",
+      "true",
+    );
     await expect(page.locator(".queue-card")).toHaveCount(readingQueue.length);
+    await expect(page.locator(".sci-fi-card")).toHaveCount(0);
     await expect(page.getByText("$100M Offers")).toBeVisible();
     await expect(page.getByText("Permutation City")).toBeVisible();
+
+    await page.getByRole("tab", { name: "Sci-fi" }).click();
+    const sciFiCount = books.filter(
+      (book) => book.shelf === "Science Fiction" || book.shelf === "Speculative Fiction",
+    ).length;
+    await expect(page.getByRole("tab", { name: "Sci-fi" })).toHaveAttribute(
+      "aria-selected",
+      "true",
+    );
+    await expect(
+      page.getByRole("heading", {
+        name: "Science fiction for stronger models",
+        level: 2,
+      }),
+    ).toBeVisible();
+    await expect(page.locator(".sci-fi-card")).toHaveCount(sciFiCount);
+    await expect(page.locator(".queue-card")).toHaveCount(0);
+    await expect(page.getByText("The Three-Body Problem")).toBeVisible();
     await expect(
       page.getByLabel("Page navigation").getByRole("link", {
         exact: true,

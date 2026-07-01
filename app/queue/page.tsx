@@ -1,17 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { books } from "@/lib/books";
 import { readingQueue } from "@/lib/reading-queue";
+import { ExploreTabs } from "./explore-tabs";
 
 export const metadata: Metadata = {
-  title: "Books George Is Reading Next | Books Radar",
+  title: "Explore Books | Books Radar",
   description:
-    "Books George is planning to read next before they become full Books Radar notes.",
+    "Explore Books Radar reading candidates across general reading and sci-fi worldview tabs.",
   alternates: {
     canonical: "/queue",
   },
 };
 
 export default function QueuePage() {
+  const sciFiBooks = books.filter(
+    (book) => book.shelf === "Science Fiction" || book.shelf === "Speculative Fiction",
+  );
+
   return (
     <main className="shell">
       <header className="topbar">
@@ -35,32 +41,16 @@ export default function QueuePage() {
       <section className="reading-queue reading-queue-page" aria-labelledby="queue-title">
         <div className="queue-heading">
           <div>
-            <p className="section-kicker">George's next reads</p>
-            <h1 id="queue-title">Books George is reading next</h1>
+            <p className="section-kicker">Explore</p>
+            <h1 id="queue-title">Books to think with next</h1>
           </div>
           <p>
-            These are books George is planning to read next before they become full
-            Books Radar notes: conversion books for turning audience into a product
-            path, plus future-facing fiction and AI books for new product ideas.
+            Browse the next reading candidates by intent: general books for
+            business, positioning, and product judgment, or sci-fi for worldview
+            and future-model building.
           </p>
         </div>
-        <div className="queue-grid">
-          {readingQueue.map((book, index) => (
-            <article className="queue-card" key={book.id}>
-              <div className="queue-card-top">
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <strong>{book.lane}</strong>
-              </div>
-              <h2>{book.title}</h2>
-              <p className="queue-author">by {book.author}</p>
-              <p>{book.reason}</p>
-              <div className="queue-read-for">
-                <span>Read for</span>
-                <p>{book.readFor}</p>
-              </div>
-            </article>
-          ))}
-        </div>
+        <ExploreTabs generalBooks={readingQueue} sciFiBooks={sciFiBooks} />
       </section>
     </main>
   );

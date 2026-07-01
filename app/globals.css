@@ -440,23 +440,82 @@ h2 {
   line-height: 1.55;
 }
 
+.explore-tabs {
+  display: grid;
+  gap: 18px;
+}
+
+.explore-tablist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+}
+
+.explore-tab {
+  border: 1px solid #cfc7b8;
+  border-radius: 999px;
+  background: #fff;
+  color: #383630;
+  padding: 9px 13px;
+  font-size: 13px;
+  font-weight: 820;
+}
+
+.explore-tab.active,
+.explore-tab:hover {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
+}
+
+.explore-panel {
+  display: grid;
+  gap: 16px;
+}
+
+.sci-fi-panel-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.7fr);
+  gap: 24px;
+  align-items: end;
+}
+
+.sci-fi-panel-heading h2 {
+  margin-bottom: 0;
+}
+
+.sci-fi-panel-heading > p {
+  margin-bottom: 0;
+  color: #4d4a44;
+  line-height: 1.55;
+}
+
 .section-kicker {
   margin: 0 0 8px;
 }
 
-.queue-grid {
+.queue-grid,
+.sci-fi-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
-.queue-card {
+.queue-card,
+.sci-fi-card {
   display: grid;
   gap: 9px;
   border: 1px solid #d7d0c1;
   border-radius: 12px;
   background: #fff;
   padding: 16px;
+}
+
+.sci-fi-card {
+  align-content: start;
+  border-color: #ccd5df;
 }
 
 .queue-card-top {
@@ -471,18 +530,34 @@ h2 {
   text-transform: uppercase;
 }
 
+.sci-fi-card > span {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 820;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .queue-card h2,
-.queue-card h3 {
+.queue-card h3,
+.sci-fi-card h3 {
   margin: 0;
   font-family: var(--serif);
   font-size: 24px;
   line-height: 1.05;
 }
 
-.queue-card p {
+.queue-card p,
+.sci-fi-card p {
   margin-bottom: 0;
   color: #4d4a44;
   line-height: 1.48;
+}
+
+.sci-fi-card .text-button {
+  width: fit-content;
+  margin-top: 4px;
 }
 
 .queue-author {
@@ -1041,6 +1116,7 @@ h2 {
   .topbar,
   .hero,
   .agent-setup,
+  .sci-fi-panel-heading,
   .queue-heading,
   .book-grid,
   .request-section,
@@ -1070,7 +1146,8 @@ h2 {
 
   .catalog-toolbar,
   .book-columns,
-  .queue-grid {
+  .queue-grid,
+  .sci-fi-grid {
     grid-template-columns: 1fr;
   }
 
