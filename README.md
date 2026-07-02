@@ -16,6 +16,7 @@ Live site: https://booksradar.snackoverflowgeorge.com
 - Daily and weekly feed generation from the same seed shelf.
 - Copyable markdown notes for each book.
 - Agent skill for one-book daily or weekly recommendations.
+- Reading guide skill for spoiler-aware book maps and read-depth decisions.
 - Request form for suggestions, requests, and note improvements.
 
 ## Quick Start
@@ -28,10 +29,17 @@ Pick your agent and run the install command, then ask the agent to set it up.
 mkdir -p ~/.codex/skills && git clone https://github.com/georgewangyu/books-radar.git ~/.codex/skills/books-radar
 ```
 
-Or use the skill installer:
+Or use the skill installer for recommendations:
 
 ```bash
 npx skills add georgewangyu/books-radar --skill books-radar -g
+```
+
+Install the reading guide skill when you want spoiler-aware background,
+chapter or section maps, and skip/skim/full-read decisions:
+
+```bash
+npx skills add georgewangyu/books-radar --skill books-radar-reading-guide -g
 ```
 
 ```text
@@ -48,7 +56,13 @@ git clone https://github.com/georgewangyu/books-radar.git ~/skills/books-radar
 Use ~/skills/books-radar/skills/books-radar/SKILL.md and set up Books Radar.
 ```
 
-The agent walks users through:
+For the reading guide workflow, use:
+
+```text
+Use ~/skills/books-radar/skills/books-radar-reading-guide/SKILL.md to map my next book.
+```
+
+The recommendation skill walks users through:
 
 - daily, weekly, or on-demand recommendations
 - delivery time and timezone
@@ -58,6 +72,10 @@ The agent walks users through:
 
 Settings are saved locally in `~/.books-radar/config.json`. Delivery
 keys, if used, are saved locally in `~/.books-radar/.env`.
+
+The reading guide skill saves spoiler preference and note location in
+`~/.books-radar/reading-guide-config.json`, then writes local reading notes to
+`~/.books-radar/reading-notes/` unless the user only wants an in-chat answer.
 
 ## Website Lead Capture
 
@@ -154,7 +172,8 @@ feeds/YYYY/MM/YYYY-MM-DD.md
 4. Copy a book note.
 5. Open a full book detail page.
 6. Request a recommendation.
-7. Install the skill and ask for today's pick.
+7. Install the recommendation skill and ask for today's pick.
+8. Install the reading guide skill and ask for a spoiler-aware map of the next book.
 
 ## Verification
 

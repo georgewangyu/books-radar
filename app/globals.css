@@ -302,7 +302,20 @@ h2 {
 
 .setup-command {
   display: grid;
+  gap: 12px;
+}
+
+.setup-command-row {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr) auto;
   gap: 10px;
+  align-items: center;
+}
+
+.setup-command-row span {
+  color: #f7f1e7;
+  font-size: 12px;
+  font-weight: 820;
 }
 
 .setup-command code {
@@ -326,6 +339,7 @@ h2 {
 }
 
 .setup-actions button,
+.setup-command-row button,
 .setup-actions a,
 .detail-actions a {
   border: 1px solid #fff;
@@ -1217,6 +1231,10 @@ h2 {
 
   .setup-command code {
     white-space: normal;
+  }
+
+  .setup-command-row {
+    grid-template-columns: 1fr;
   }
 
   .rail-list,

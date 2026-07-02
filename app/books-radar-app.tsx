@@ -38,8 +38,19 @@ const issueLabels: Record<string, string> = {
   handle: "Handle",
 };
 
-const skillInstallCommand =
-  "npx skills add georgewangyu/books-radar --skill books-radar -g";
+const skillInstallCommands = [
+  {
+    id: "books-radar",
+    label: "Recommendation skill",
+    command: "npx skills add georgewangyu/books-radar --skill books-radar -g",
+  },
+  {
+    id: "books-radar-reading-guide",
+    label: "Reading guide skill",
+    command:
+      "npx skills add georgewangyu/books-radar --skill books-radar-reading-guide -g",
+  },
+] as const;
 const skillRepoUrl = "https://github.com/georgewangyu/books-radar";
 const leadStorageKey = "books-radar-install-unlocked";
 const pageSize = 12;
@@ -214,9 +225,9 @@ export function BooksRadarApp({ books }: Props) {
     window.setTimeout(() => setCopied(""), 1400);
   }
 
-  async function copySetupCommand() {
-    await navigator.clipboard.writeText(skillInstallCommand);
-    setCopied("setup-command");
+  async function copySetupCommand(command: string, id: string) {
+    await navigator.clipboard.writeText(command);
+    setCopied(`setup-command-${id}`);
     window.setTimeout(() => setCopied(""), 1400);
   }
 
@@ -347,19 +358,27 @@ export function BooksRadarApp({ books }: Props) {
 
       <section className="agent-setup" aria-labelledby="agent-setup-title">
         <div>
-          <h2 id="agent-setup-title">Get one recommendation in your agent.</h2>
+          <h2 id="agent-setup-title">Get Books Radar in your agent.</h2>
           <p>
-            Install the skill for daily or weekly picks, a compact reading note,
-            and a small prompt for what to do with the book next.
+            Install the recommendation skill for daily or weekly picks, or add
+            the reading guide for spoiler-aware book maps and read-depth decisions.
           </p>
         </div>
         {leadUnlocked ? (
           <div className="setup-command" aria-live="polite">
-            <code>{skillInstallCommand}</code>
+            {skillInstallCommands.map((skill) => (
+              <div className="setup-command-row" key={skill.id}>
+                <span>{skill.label}</span>
+                <code>{skill.command}</code>
+                <button
+                  onClick={() => copySetupCommand(skill.command, skill.id)}
+                  type="button"
+                >
+                  {copied === `setup-command-${skill.id}` ? "Copied" : "Copy command"}
+                </button>
+              </div>
+            ))}
             <div className="setup-actions">
-              <button onClick={copySetupCommand} type="button">
-                {copied === "setup-command" ? "Copied" : "Copy command"}
-              </button>
               <a href={skillRepoUrl}>Star the repo</a>
               <a href="#catalog">Browse the shelf</a>
             </div>

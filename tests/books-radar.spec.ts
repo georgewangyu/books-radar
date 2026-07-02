@@ -129,7 +129,7 @@ test.describe("Books Radar catalog", () => {
     expect(clipboard).toContain("Why George recommends it:");
   });
 
-  test("setup command copies from the agent skill card", async ({ page, context }) => {
+  test("setup commands copy from the agent skill card", async ({ page, context }) => {
     await context.grantPermissions(["clipboard-read", "clipboard-write"]);
     await page.route("**/api/leads", async (route) => {
       await route.fulfill({
@@ -148,12 +148,31 @@ test.describe("Books Radar catalog", () => {
       "https://github.com/georgewangyu/books-radar",
     );
 
-    await page.getByRole("button", { name: "Copy command" }).click();
-    await expect(page.getByRole("button", { name: "Copied" })).toBeVisible();
+    const recommendationCommand = page.locator(".setup-command-row", {
+      hasText: "Recommendation skill",
+    });
+    await expect(recommendationCommand).toContainText(
+      "npx skills add georgewangyu/books-radar --skill books-radar -g",
+    );
+    await recommendationCommand.getByRole("button", { name: "Copy command" }).click();
+    await expect(recommendationCommand.getByRole("button", { name: "Copied" })).toBeVisible();
 
-    const clipboard = await page.evaluate(() => navigator.clipboard.readText());
+    let clipboard = await page.evaluate(() => navigator.clipboard.readText());
     expect(clipboard).toBe(
       "npx skills add georgewangyu/books-radar --skill books-radar -g",
+    );
+
+    const readingGuideCommand = page.locator(".setup-command-row", {
+      hasText: "Reading guide skill",
+    });
+    await expect(readingGuideCommand).toContainText(
+      "npx skills add georgewangyu/books-radar --skill books-radar-reading-guide -g",
+    );
+    await readingGuideCommand.getByRole("button", { name: "Copy command" }).click();
+
+    clipboard = await page.evaluate(() => navigator.clipboard.readText());
+    expect(clipboard).toBe(
+      "npx skills add georgewangyu/books-radar --skill books-radar-reading-guide -g",
     );
   });
 

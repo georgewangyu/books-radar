@@ -1,0 +1,4 @@
+interface:
+  display_name: "Books Radar Reading Guide"
+  short_description: "Spoiler-aware book maps and read decisions"
+  default_prompt: "Use $books-radar-reading-guide to map my next Books Radar book and help me decide how deeply to read it."

@@ -63,6 +63,16 @@ export const readingQueue: ReadingQueueBook[] = [
     readFor: "Customer interviews, problem discovery, and validation questions.",
   },
   {
+    id: "destined-for-war",
+    title: "Destined for War",
+    author: "Graham Allison",
+    lane: "Future ideas",
+    reason:
+      "A power-transition candidate for thinking about the Thucydides Trap and US-China rivalry without letting the analogy become destiny.",
+    readFor:
+      "Rising powers, ruling powers, escalation paths, and when historical analogies help or overfit.",
+  },
+  {
     id: "ai-2041",
     title: "AI 2041",
     author: "Kai-Fu Lee and Chen Qiufan",
